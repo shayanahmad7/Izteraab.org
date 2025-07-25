@@ -22,7 +22,7 @@ const config = {
       colors: {
         // Your refined custom palette
         "forest-green": "#40916c",
-        "copper-pink": "#e07a5f",
+        "girly-pink": "#EC407A",
         "warm-ivory": "#faf8f6",
         "slate-dark": "#1e293b",
         "cool-grey": "#64748b",
@@ -36,7 +36,7 @@ const config = {
           foreground: "#faf8f6", // Warm Ivory
         },
         secondary: {
-          DEFAULT: "#e07a5f", // Copper Pink
+          DEFAULT: "#EC407A", // Copper Pink
           foreground: "#faf8f6", // Warm Ivory
         },
         destructive: {
@@ -48,7 +48,7 @@ const config = {
           foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "#e07a5f", // Copper Pink
+          DEFAULT: "#EC407A", // Copper Pink
           foreground: "#faf8f6", // Warm Ivory
         },
         popover: {

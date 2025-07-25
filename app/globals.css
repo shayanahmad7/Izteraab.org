@@ -12,11 +12,11 @@
     --popover-foreground: 30 41 59; /* Slate #1e293b */
     --primary: 64 145 108; /* Forest Green #40916c */
     --primary-foreground: 250 248 246; /* Warm Ivory #faf8f6 */
-    --secondary: 224 122 95; /* Copper Pink #e07a5f */
+    --secondary: 236 64 122; /* Copper Pink #e07a5f */
     --secondary-foreground: 250 248 246; /* Warm Ivory #faf8f6 */
     --muted: 226 232 240;
     --muted-foreground: 100 116 139; /* Cool Grey #64748b */
-    --accent: 224 122 95; /* Copper Pink #e07a5f */
+    --accent: 236 64 122; /* Copper Pink #e07a5f */
     --accent-foreground: 250 248 246; /* Warm Ivory #faf8f6 */
     --destructive: 239 68 68;
     --destructive-foreground: 250 248 246; /* Warm Ivory #faf8f6 */
@@ -25,7 +25,7 @@
     --ring: 64 145 108; /* Forest Green #40916c */
     --radius: 0.5rem;
     --chart-1: 64 145 108; /* Forest Green #40916c */
-    --chart-2: 224 122 95; /* Copper Pink #e07a5f */
+    --chart-2: 236 64 122; /* Copper Pink #e07a5f */
     --chart-3: 30 41 59; /* Slate #1e293b */
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
@@ -40,11 +40,11 @@
     --popover-foreground: 250 248 246; /* Warm Ivory #faf8f6 */
     --primary: 64 145 108; /* Forest Green #40916c */
     --primary-foreground: 250 248 246; /* Warm Ivory #faf8f6 */
-    --secondary: 224 122 95; /* Copper Pink #e07a5f */
+    --secondary: 236 64 122; /* Copper Pink #e07a5f */
     --secondary-foreground: 250 248 246; /* Warm Ivory #faf8f6 */
     --muted: 100 116 139; /* Cool Grey #64748b */
     --muted-foreground: 250 248 246; /* Warm Ivory #faf8f6 */
-    --accent: 224 122 95; /* Copper Pink #e07a5f */
+    --accent: 236 64 122; /* Copper Pink #e07a5f */
     --accent-foreground: 250 248 246; /* Warm Ivory #faf8f6 */
     --destructive: 239 68 68;
     --destructive-foreground: 250 248 246; /* Warm Ivory #faf8f6 */
@@ -52,7 +52,7 @@
     --input: 100 116 139; /* Cool Grey #64748b */
     --ring: 64 145 108; /* Forest Green #40916c */
     --chart-1: 64 145 108; /* Forest Green #40916c */
-    --chart-2: 224 122 95; /* Copper Pink #e07a5f */
+    --chart-2: 236 64 122; /* Copper Pink #e07a5f */
     --chart-3: 30 41 59; /* Slate #1e293b */
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
