@@ -20,9 +20,9 @@ const config = {
     },
     extend: {
       colors: {
-        // Your sophisticated custom palette
+        // Your refined custom palette
         "forest-green": "#40916c",
-        "warm-beige": "#d4a574",
+        "copper-pink": "#e07a5f",
         "warm-ivory": "#faf8f6",
         "slate-dark": "#1e293b",
         "cool-grey": "#64748b",
@@ -36,8 +36,8 @@ const config = {
           foreground: "#faf8f6", // Warm Ivory
         },
         secondary: {
-          DEFAULT: "#d4a574", // Warm Beige
-          foreground: "#1e293b", // Slate Dark
+          DEFAULT: "#e07a5f", // Copper Pink
+          foreground: "#faf8f6", // Warm Ivory
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -48,8 +48,8 @@ const config = {
           foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "#d4a574", // Warm Beige
-          foreground: "#1e293b", // Slate Dark
+          DEFAULT: "#e07a5f", // Copper Pink
+          foreground: "#faf8f6", // Warm Ivory
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
