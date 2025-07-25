@@ -30,28 +30,28 @@ export default function HomePage() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-cloud-white overflow-hidden">
+    <div className="min-h-screen bg-warm-ivory overflow-hidden">
       {/* Floating Background Elements */}
       <div className="fixed inset-0 pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-sky-blue/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-96 h-96 bg-slate-gray/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-deep-navy/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-sage-green/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-96 h-96 bg-cool-grey/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-deep-black/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
       </div>
 
       {/* Header */}
-      <header className="border-b border-slate-gray/20 bg-cloud-white/80 backdrop-blur-sm sticky top-0 z-50 transition-all duration-300">
+      <header className="border-b border-cool-grey/20 bg-warm-ivory/80 backdrop-blur-sm sticky top-0 z-50 transition-all duration-300">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div
             className={`flex items-center space-x-2 transition-all duration-700 ${isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"}`}
           >
-            <div className="w-8 h-8 bg-gradient-to-br from-sky-blue to-deep-navy rounded-lg flex items-center justify-center hover:scale-110 transition-transform duration-300 hover:rotate-12">
-              <Brain className="w-5 h-5 text-cloud-white animate-pulse" />
+            <div className="w-8 h-8 bg-gradient-to-br from-sage-green to-deep-black rounded-lg flex items-center justify-center hover:scale-110 transition-transform duration-300 hover:rotate-12">
+              <Brain className="w-5 h-5 text-warm-ivory animate-pulse" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-slate-gray hover:text-sky-blue transition-colors duration-300">
+              <h1 className="text-xl font-bold text-deep-black hover:text-sage-green transition-colors duration-300">
                 EDVANCE
               </h1>
-              <p className="text-xs text-sky-blue font-medium animate-pulse">PAKISTAN</p>
+              <p className="text-xs text-sage-green font-medium animate-pulse">PAKISTAN</p>
             </div>
           </div>
           <nav
@@ -59,43 +59,43 @@ export default function HomePage() {
           >
             <Link
               href="#about"
-              className="text-slate-gray hover:text-sky-blue transition-all duration-300 hover:scale-105 relative group"
+              className="text-cool-grey hover:text-sage-green transition-all duration-300 hover:scale-105 relative group"
             >
               About
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-blue transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-sage-green transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link
               href="#solution"
-              className="text-slate-gray hover:text-sky-blue transition-all duration-300 hover:scale-105 relative group"
+              className="text-cool-grey hover:text-sage-green transition-all duration-300 hover:scale-105 relative group"
             >
               Solution
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-blue transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-sage-green transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link
               href="/demo"
-              className="text-slate-gray hover:text-sky-blue transition-all duration-300 hover:scale-105 relative group"
+              className="text-cool-grey hover:text-sage-green transition-all duration-300 hover:scale-105 relative group"
             >
               Demo
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-blue transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-sage-green transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link
               href="#pilot"
-              className="text-slate-gray hover:text-sky-blue transition-all duration-300 hover:scale-105 relative group"
+              className="text-cool-grey hover:text-sage-green transition-all duration-300 hover:scale-105 relative group"
             >
               Pilot
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-blue transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-sage-green transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link
               href="#contact"
-              className="text-slate-gray hover:text-sky-blue transition-all duration-300 hover:scale-105 relative group"
+              className="text-cool-grey hover:text-sage-green transition-all duration-300 hover:scale-105 relative group"
             >
               Contact
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-blue transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-sage-green transition-all duration-300 group-hover:w-full"></span>
             </Link>
           </nav>
           <Button
             asChild
-            className={`bg-sky-blue hover:bg-sky-blue/90 text-cloud-white hover:scale-105 transition-all duration-300 hover:shadow-lg ${isVisible ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"} delay-500`}
+            className={`bg-sage-green hover:bg-sage-green/90 text-warm-ivory hover:scale-105 transition-all duration-300 hover:shadow-lg ${isVisible ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"} delay-500`}
           >
             <Link href="#contact">Get Involved</Link>
           </Button>
@@ -106,22 +106,22 @@ export default function HomePage() {
       <AnimatedSection className="py-20 px-4 relative" animation="fade-up">
         <div className="container mx-auto text-center max-w-4xl relative z-10">
           <Badge
-            className={`mb-6 bg-sky-blue/10 text-slate-gray border-sky-blue/20 hover:bg-sky-blue/20 hover:scale-105 transition-all duration-500 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+            className={`mb-6 bg-sage-green/10 text-deep-black border-sage-green/20 hover:bg-sage-green/20 hover:scale-105 transition-all duration-500 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
           >
-            <Sparkles className="w-3 h-3 mr-1 animate-spin text-sky-blue" />
+            <Sparkles className="w-3 h-3 mr-1 animate-spin text-sage-green" />
             Transforming Education in Pakistan
           </Badge>
           <h1
-            className={`text-4xl md:text-6xl font-bold text-slate-gray mb-6 leading-tight transition-all duration-700 delay-200 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+            className={`text-4xl md:text-6xl font-bold text-deep-black mb-6 leading-tight transition-all duration-700 delay-200 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
           >
             Empowering{" "}
-            <span className="bg-gradient-to-r from-sky-blue via-slate-gray to-deep-navy bg-clip-text text-transparent animate-gradient bg-300% bg-size-200">
+            <span className="bg-gradient-to-r from-sage-green via-cool-grey to-deep-black bg-clip-text text-transparent animate-gradient bg-300% bg-size-200">
               Personalized Learning
             </span>{" "}
             in Pakistan
           </h1>
           <p
-            className={`text-xl text-slate-gray/80 mb-8 leading-relaxed transition-all duration-700 delay-400 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+            className={`text-xl text-cool-grey mb-8 leading-relaxed transition-all duration-700 delay-400 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
           >
             Enabling personalized, mastery-based learning through AI and flipped classrooms. Helping every student
             unlock their true potential and develop a growth mindset.
@@ -131,7 +131,7 @@ export default function HomePage() {
           >
             <Button
               size="lg"
-              className="bg-sky-blue hover:bg-sky-blue/90 text-cloud-white hover:scale-105 hover:shadow-xl transition-all duration-300 group"
+              className="bg-sage-green hover:bg-sage-green/90 text-warm-ivory hover:scale-105 hover:shadow-xl transition-all duration-300 group"
               asChild
             >
               <Link href="/demo">
@@ -141,7 +141,7 @@ export default function HomePage() {
             </Button>
             <Button
               size="lg"
-              className="bg-deep-navy hover:bg-deep-navy/90 text-cloud-white hover:scale-105 hover:shadow-xl transition-all duration-300 group"
+              className="bg-deep-black hover:bg-deep-black/90 text-warm-ivory hover:scale-105 hover:shadow-xl transition-all duration-300 group"
               asChild
             >
               <Link href="#solution">
@@ -152,7 +152,7 @@ export default function HomePage() {
             <Button
               size="lg"
               variant="outline"
-              className="border-slate-gray text-slate-gray hover:bg-slate-gray hover:text-cloud-white hover:scale-105 hover:shadow-lg transition-all duration-300 bg-transparent"
+              className="border-cool-grey text-cool-grey hover:bg-cool-grey hover:text-warm-ivory hover:scale-105 hover:shadow-lg transition-all duration-300 bg-transparent"
               asChild
             >
               <Link href="#contact">Partner With Us</Link>
@@ -163,12 +163,12 @@ export default function HomePage() {
 
       {/* Mission Statement */}
       <AnimatedSection
-        className="py-16 bg-gradient-to-r from-deep-navy via-slate-gray to-deep-navy text-cloud-white relative overflow-hidden"
+        className="py-16 bg-gradient-to-r from-deep-black via-cool-grey to-deep-black text-warm-ivory relative overflow-hidden"
         animation="scale-up"
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-sky-blue/20 to-deep-navy/20 animate-gradient bg-300%"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-sage-green/20 to-deep-black/20 animate-gradient bg-300%"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">OUR MISSION</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Mission</h2>
           <p className="text-xl md:text-2xl leading-relaxed max-w-4xl mx-auto">
             To enable personalized, mastery-based learning in Pakistan using AI; empowering both teachers and students
             to succeed in the classroom and beyond.
@@ -180,8 +180,8 @@ export default function HomePage() {
       <AnimatedSection id="about" className="py-20 px-4" animation="fade-up">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-gray mb-4">About EdVance Pakistan</h2>
-            <p className="text-xl text-slate-gray/80 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-deep-black mb-4">About EdVance Pakistan</h2>
+            <p className="text-xl text-cool-grey max-w-3xl mx-auto">
               Our NGO is focused on transforming education through AI and personalized learning, bridging learning gaps
               with innovative, student-centered approaches.
             </p>
@@ -189,17 +189,17 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <AnimatedSection animation="fade-left" delay={100}>
-              <Card className="border-2 border-sky-blue/20 hover:border-sky-blue/40 hover:shadow-xl transition-all duration-500 hover:scale-105 group h-full bg-cloud-white">
+              <Card className="border-2 border-sage-green/20 hover:border-sage-green/40 hover:shadow-xl transition-all duration-500 hover:scale-105 group h-full bg-warm-ivory">
                 <CardHeader>
-                  <div className="w-12 h-12 bg-sky-blue/10 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
-                    <Target className="w-6 h-6 text-sky-blue" />
+                  <div className="w-12 h-12 bg-sage-green/10 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                    <Target className="w-6 h-6 text-sage-green animate-pulse" />
                   </div>
-                  <CardTitle className="group-hover:text-sky-blue transition-colors duration-300 text-slate-gray">
+                  <CardTitle className="group-hover:text-sage-green transition-colors duration-300 text-deep-black">
                     Student-Centered
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-slate-gray/80">
+                  <p className="text-cool-grey">
                     Bridging learning gaps with innovative approaches that put students at the center of their
                     educational journey.
                   </p>
@@ -208,17 +208,17 @@ export default function HomePage() {
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={200}>
-              <Card className="border-2 border-slate-gray/20 hover:border-slate-gray/40 hover:shadow-xl transition-all duration-500 hover:scale-105 group h-full bg-cloud-white">
+              <Card className="border-2 border-sage-green/20 hover:border-sage-green/40 hover:shadow-xl transition-all duration-500 hover:scale-105 group h-full bg-warm-ivory">
                 <CardHeader>
-                  <div className="w-12 h-12 bg-sky-blue/10 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
-                    <Users className="w-6 h-6 text-sky-blue" />
+                  <div className="w-12 h-12 bg-sage-green/10 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                    <Users className="w-6 h-6 text-sage-green animate-pulse" />
                   </div>
-                  <CardTitle className="group-hover:text-sky-blue transition-colors duration-300 text-slate-gray">
+                  <CardTitle className="group-hover:text-sage-green transition-colors duration-300 text-deep-black">
                     Teacher Empowerment
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-slate-gray/80">
+                  <p className="text-cool-grey">
                     Supporting teachers as educational coaches, not just content deliverers, transforming their role in
                     the classroom.
                   </p>
@@ -227,17 +227,17 @@ export default function HomePage() {
             </AnimatedSection>
 
             <AnimatedSection animation="fade-right" delay={300}>
-              <Card className="border-2 border-deep-navy/20 hover:border-deep-navy/40 hover:shadow-xl transition-all duration-500 hover:scale-105 group h-full bg-cloud-white">
+              <Card className="border-2 border-sage-green/20 hover:border-sage-green/40 hover:shadow-xl transition-all duration-500 hover:scale-105 group h-full bg-warm-ivory">
                 <CardHeader>
-                  <div className="w-12 h-12 bg-sky-blue/10 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
-                    <Brain className="w-6 h-6 text-sky-blue animate-pulse" />
+                  <div className="w-12 h-12 bg-sage-green/10 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                    <Brain className="w-6 h-6 text-sage-green animate-pulse" />
                   </div>
-                  <CardTitle className="group-hover:text-sky-blue transition-colors duration-300 text-slate-gray">
+                  <CardTitle className="group-hover:text-sage-green transition-colors duration-300 text-deep-black">
                     AI-Powered
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-slate-gray/80">
+                  <p className="text-cool-grey">
                     Leveraging artificial intelligence to create personalized learning experiences that adapt to each
                     student's needs.
                   </p>
@@ -249,69 +249,67 @@ export default function HomePage() {
       </AnimatedSection>
 
       {/* Solution Section */}
-      <AnimatedSection id="solution" className="py-20 px-4 bg-slate-gray/5 relative" animation="slide-up">
+      <AnimatedSection id="solution" className="py-20 px-4 bg-cool-grey/5 relative" animation="slide-up">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-gray mb-4">Our Solution</h2>
-            <p className="text-xl text-slate-gray/80 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-deep-black mb-4">Our Solution</h2>
+            <p className="text-xl text-cool-grey max-w-3xl mx-auto">
               A comprehensive approach to personalized learning that transforms traditional education
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <AnimatedSection animation="fade-up" delay={100}>
-              <Card className="text-center p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-cloud-white border-sky-blue/20">
-                <div className="w-16 h-16 bg-sky-blue/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-sky-blue/20 transition-all duration-300">
-                  <Target className="w-8 h-8 text-sky-blue group-hover:rotate-12 transition-transform duration-300 animate-pulse" />
+              <Card className="text-center p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-warm-ivory border-sage-green/20">
+                <div className="w-16 h-16 bg-sage-green/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-sage-green/20 transition-all duration-300">
+                  <Target className="w-8 h-8 text-sage-green group-hover:rotate-12 transition-transform duration-300 animate-pulse" />
                 </div>
-                <h3 className="font-semibold text-lg mb-2 group-hover:text-sky-blue transition-colors duration-300 text-slate-gray">
+                <h3 className="font-semibold text-lg mb-2 group-hover:text-sage-green transition-colors duration-300 text-deep-black">
                   Mastery-Based Learning
                 </h3>
-                <p className="text-slate-gray/80 text-sm">
+                <p className="text-cool-grey text-sm">
                   Student-centered learning model focused on mastery rather than time-based progression
                 </p>
               </Card>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={200}>
-              <Card className="text-center p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-cloud-white border-slate-gray/20">
-                <div className="w-16 h-16 bg-sky-blue/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-sky-blue/20 transition-all duration-300">
-                  <Brain className="w-8 h-8 text-sky-blue group-hover:rotate-12 transition-transform duration-300 animate-pulse" />
+              <Card className="text-center p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-warm-ivory border-sage-green/20">
+                <div className="w-16 h-16 bg-sage-green/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-sage-green/20 transition-all duration-300">
+                  <Brain className="w-8 h-8 text-sage-green group-hover:rotate-12 transition-transform duration-300 animate-pulse" />
                 </div>
-                <h3 className="font-semibold text-lg mb-2 group-hover:text-sky-blue transition-colors duration-300 text-slate-gray">
+                <h3 className="font-semibold text-lg mb-2 group-hover:text-sage-green transition-colors duration-300 text-deep-black">
                   AI Tools
                 </h3>
-                <p className="text-slate-gray/80 text-sm">
+                <p className="text-cool-grey text-sm">
                   KhanMigo and other AI tools for diagnostics, practice, and personalized feedback
                 </p>
               </Card>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={300}>
-              <Card className="text-center p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-cloud-white border-deep-navy/20">
-                <div className="w-16 h-16 bg-sky-blue/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-sky-blue/20 transition-all duration-300">
-                  <Users className="w-8 h-8 text-sky-blue group-hover:rotate-12 transition-transform duration-300 animate-pulse" />
+              <Card className="text-center p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-warm-ivory border-sage-green/20">
+                <div className="w-16 h-16 bg-sage-green/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-sage-green/20 transition-all duration-300">
+                  <Users className="w-8 h-8 text-sage-green group-hover:rotate-12 transition-transform duration-300 animate-pulse" />
                 </div>
-                <h3 className="font-semibold text-lg mb-2 group-hover:text-sky-blue transition-colors duration-300 text-slate-gray">
+                <h3 className="font-semibold text-lg mb-2 group-hover:text-sage-green transition-colors duration-300 text-deep-black">
                   Teacher Training
                 </h3>
-                <p className="text-slate-gray/80 text-sm">
+                <p className="text-cool-grey text-sm">
                   Teachers trained to be coaches and facilitators, not just lecturers
                 </p>
               </Card>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={400}>
-              <Card className="text-center p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-cloud-white border-sky-blue/20">
-                <div className="w-16 h-16 bg-sky-blue/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-sky-blue/20 transition-all duration-300">
-                  <BookOpen className="w-8 h-8 text-sky-blue group-hover:rotate-12 transition-transform duration-300 animate-pulse" />
+              <Card className="text-center p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-warm-ivory border-sage-green/20">
+                <div className="w-16 h-16 bg-sage-green/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-sage-green/20 transition-all duration-300">
+                  <BookOpen className="w-8 h-8 text-sage-green group-hover:rotate-12 transition-transform duration-300 animate-pulse" />
                 </div>
-                <h3 className="font-semibold text-lg mb-2 group-hover:text-sky-blue transition-colors duration-300 text-slate-gray">
+                <h3 className="font-semibold text-lg mb-2 group-hover:text-sage-green transition-colors duration-300 text-deep-black">
                   Existing Infrastructure
                 </h3>
-                <p className="text-slate-gray/80 text-sm">
-                  Leverages existing Chromebooks, LMS, and lab infrastructure
-                </p>
+                <p className="text-cool-grey text-sm">Leverages existing Chromebooks, LMS, and lab infrastructure</p>
               </Card>
             </AnimatedSection>
           </div>
@@ -322,66 +320,64 @@ export default function HomePage() {
       <AnimatedSection className="py-20 px-4" animation="fade-left">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-gray mb-4">How It Works</h2>
-            <p className="text-xl text-slate-gray/80">
-              A comprehensive framework for personalized learning implementation
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-deep-black mb-4">How It Works</h2>
+            <p className="text-xl text-cool-grey">A comprehensive framework for personalized learning implementation</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <AnimatedSection animation="fade-right" delay={200}>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4 group">
-                  <div className="w-8 h-8 bg-sky-blue rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 group-hover:bg-sky-blue/90 transition-all duration-300">
-                    <CheckCircle className="w-5 h-5 text-cloud-white" />
+                  <div className="w-8 h-8 bg-sage-green rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 group-hover:bg-sage-green/90 transition-all duration-300">
+                    <CheckCircle className="w-5 h-5 text-warm-ivory" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg mb-2 group-hover:text-sky-blue transition-colors duration-300 text-slate-gray">
+                    <h3 className="font-semibold text-lg mb-2 group-hover:text-sage-green transition-colors duration-300 text-deep-black">
                       AI-Based Diagnostics
                     </h3>
-                    <p className="text-slate-gray/80">
+                    <p className="text-cool-grey">
                       Personalized learning paths based on individual student needs and learning styles
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4 group">
-                  <div className="w-8 h-8 bg-sky-blue rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 group-hover:bg-sky-blue/90 transition-all duration-300">
-                    <CheckCircle className="w-5 h-5 text-cloud-white" />
+                  <div className="w-8 h-8 bg-sage-green rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 group-hover:bg-sage-green/90 transition-all duration-300">
+                    <CheckCircle className="w-5 h-5 text-warm-ivory" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg mb-2 group-hover:text-sky-blue transition-colors duration-300 text-slate-gray">
+                    <h3 className="font-semibold text-lg mb-2 group-hover:text-sage-green transition-colors duration-300 text-deep-black">
                       Peer Tutoring & Teacher Support
                     </h3>
-                    <p className="text-slate-gray/80">
+                    <p className="text-cool-grey">
                       Collaborative learning environment with personalized teacher guidance
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4 group">
-                  <div className="w-8 h-8 bg-sky-blue rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 group-hover:bg-sky-blue/90 transition-all duration-300">
-                    <CheckCircle className="w-5 h-5 text-cloud-white" />
+                  <div className="w-8 h-8 bg-sage-green rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 group-hover:bg-sage-green/90 transition-all duration-300">
+                    <CheckCircle className="w-5 h-5 text-warm-ivory" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg mb-2 group-hover:text-sky-blue transition-colors duration-300 text-slate-gray">
+                    <h3 className="font-semibold text-lg mb-2 group-hover:text-sage-green transition-colors duration-300 text-deep-black">
                       Weekly KhanMigo Sessions
                     </h3>
-                    <p className="text-slate-gray/80">
+                    <p className="text-cool-grey">
                       Regular AI-powered learning sessions combined with collaborative group work
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4 group">
-                  <div className="w-8 h-8 bg-sky-blue rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 group-hover:bg-sky-blue/90 transition-all duration-300">
-                    <CheckCircle className="w-5 h-5 text-cloud-white" />
+                  <div className="w-8 h-8 bg-sage-green rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 group-hover:bg-sage-green/90 transition-all duration-300">
+                    <CheckCircle className="w-5 h-5 text-warm-ivory" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg mb-2 group-hover:text-sky-blue transition-colors duration-300 text-slate-gray">
+                    <h3 className="font-semibold text-lg mb-2 group-hover:text-sage-green transition-colors duration-300 text-deep-black">
                       Monthly Assessments
                     </h3>
-                    <p className="text-slate-gray/80">
+                    <p className="text-cool-grey">
                       Regular progress tracking and growth measurement to ensure continuous improvement
                     </p>
                   </div>
@@ -390,25 +386,25 @@ export default function HomePage() {
             </AnimatedSection>
 
             <AnimatedSection animation="fade-left" delay={400}>
-              <Card className="p-8 bg-gradient-to-br from-sky-blue/5 to-deep-navy/5 border-2 border-sky-blue/20 hover:shadow-xl transition-all duration-500 hover:scale-105">
+              <Card className="p-8 bg-gradient-to-br from-sage-green/5 to-deep-black/5 border-2 border-sage-green/20 hover:shadow-xl transition-all duration-500 hover:scale-105">
                 <CardHeader className="pb-4">
-                  <CardTitle className="text-xl flex items-center text-slate-gray">
-                    <Sparkles className="w-5 h-5 mr-2 text-sky-blue animate-spin" />
+                  <CardTitle className="text-xl flex items-center text-deep-black">
+                    <Sparkles className="w-5 h-5 mr-2 text-sage-green animate-spin" />
                     Teacher Enablement
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="flex items-center space-x-3 group hover:translate-x-2 transition-transform duration-300">
-                    <Lightbulb className="w-5 h-5 text-sky-blue group-hover:animate-bounce" />
-                    <span className="text-slate-gray">Online training & ongoing mentorship</span>
+                    <Lightbulb className="w-5 h-5 text-sage-green group-hover:animate-bounce" />
+                    <span className="text-cool-grey">Online training & ongoing mentorship</span>
                   </div>
                   <div className="flex items-center space-x-3 group hover:translate-x-2 transition-transform duration-300">
-                    <TrendingUp className="w-5 h-5 text-sky-blue group-hover:animate-bounce" />
-                    <span className="text-slate-gray">Teachers selected based on tech-readiness & motivation</span>
+                    <TrendingUp className="w-5 h-5 text-sage-green group-hover:animate-bounce" />
+                    <span className="text-cool-grey">Teachers selected based on tech-readiness & motivation</span>
                   </div>
                   <div className="flex items-center space-x-3 group hover:translate-x-2 transition-transform duration-300">
-                    <Heart className="w-5 h-5 text-sky-blue group-hover:animate-bounce" />
-                    <span className="text-slate-gray">Senior students trained as assistants to support class flow</span>
+                    <Heart className="w-5 h-5 text-sage-green group-hover:animate-bounce" />
+                    <span className="text-cool-grey">Senior students trained as assistants to support class flow</span>
                   </div>
                 </CardContent>
               </Card>
@@ -420,10 +416,10 @@ export default function HomePage() {
       {/* Pilot Project */}
       <AnimatedSection
         id="pilot"
-        className="py-20 px-4 bg-gradient-to-r from-sky-blue via-slate-gray to-deep-navy text-cloud-white relative overflow-hidden"
+        className="py-20 px-4 bg-gradient-to-r from-sage-green via-cool-grey to-deep-black text-warm-ivory relative overflow-hidden"
         animation="scale-up"
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-sky-blue/80 to-deep-navy/80 animate-gradient bg-300%"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-sage-green/80 to-deep-black/80 animate-gradient bg-300%"></div>
         <div className="container mx-auto max-w-4xl text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">Pilot Project</h2>
           <p className="text-xl mb-12 opacity-90">
@@ -432,7 +428,7 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <AnimatedSection animation="fade-up" delay={100}>
-              <Card className="bg-cloud-white/10 backdrop-blur-sm border-cloud-white/20 text-cloud-white hover:bg-cloud-white/20 transition-all duration-500 hover:scale-105 hover:-translate-y-2 h-full">
+              <Card className="bg-warm-ivory/10 backdrop-blur-sm border-warm-ivory/20 text-warm-ivory hover:bg-warm-ivory/20 transition-all duration-500 hover:scale-105 hover:-translate-y-2 h-full">
                 <CardHeader className="pb-2">
                   <CardTitle className="text-lg">Location</CardTitle>
                 </CardHeader>
@@ -443,7 +439,7 @@ export default function HomePage() {
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={200}>
-              <Card className="bg-cloud-white/10 backdrop-blur-sm border-cloud-white/20 text-cloud-white hover:bg-cloud-white/20 transition-all duration-500 hover:scale-105 hover:-translate-y-2 h-full">
+              <Card className="bg-warm-ivory/10 backdrop-blur-sm border-warm-ivory/20 text-warm-ivory hover:bg-warm-ivory/20 transition-all duration-500 hover:scale-105 hover:-translate-y-2 h-full">
                 <CardHeader className="pb-2">
                   <CardTitle className="text-lg">Grade Level</CardTitle>
                 </CardHeader>
@@ -454,7 +450,7 @@ export default function HomePage() {
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={300}>
-              <Card className="bg-cloud-white/10 backdrop-blur-sm border-cloud-white/20 text-cloud-white hover:bg-cloud-white/20 transition-all duration-500 hover:scale-105 hover:-translate-y-2 h-full">
+              <Card className="bg-warm-ivory/10 backdrop-blur-sm border-warm-ivory/20 text-warm-ivory hover:bg-warm-ivory/20 transition-all duration-500 hover:scale-105 hover:-translate-y-2 h-full">
                 <CardHeader className="pb-2">
                   <CardTitle className="text-lg">Class Size</CardTitle>
                 </CardHeader>
@@ -465,7 +461,7 @@ export default function HomePage() {
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={400}>
-              <Card className="bg-cloud-white/10 backdrop-blur-sm border-cloud-white/20 text-cloud-white hover:bg-cloud-white/20 transition-all duration-500 hover:scale-105 hover:-translate-y-2 h-full">
+              <Card className="bg-warm-ivory/10 backdrop-blur-sm border-warm-ivory/20 text-warm-ivory hover:bg-warm-ivory/20 transition-all duration-500 hover:scale-105 hover:-translate-y-2 h-full">
                 <CardHeader className="pb-2">
                   <CardTitle className="text-lg">Duration</CardTitle>
                 </CardHeader>
@@ -483,47 +479,47 @@ export default function HomePage() {
       </AnimatedSection>
 
       {/* Contact Section */}
-      <AnimatedSection id="contact" className="py-20 px-4 bg-slate-gray/5" animation="fade-up">
+      <AnimatedSection id="contact" className="py-20 px-4 bg-cool-grey/5" animation="fade-up">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-gray mb-6">Let's Reimagine Learning</h2>
-          <p className="text-xl text-slate-gray/80 mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-deep-black mb-6">Let's Reimagine Learning</h2>
+          <p className="text-xl text-cool-grey mb-8">
             One classroom at a time. Contact us to partner, pilot, or support our mission.
           </p>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             <AnimatedSection animation="fade-left" delay={100}>
-              <Card className="p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-cloud-white border-sky-blue/20">
-                <div className="w-12 h-12 bg-sky-blue/10 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-sky-blue/20 transition-all duration-300">
-                  <Mail className="w-6 h-6 text-sky-blue group-hover:animate-bounce" />
+              <Card className="p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-warm-ivory border-sage-green/20">
+                <div className="w-12 h-12 bg-sage-green/10 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-sage-green/20 transition-all duration-300">
+                  <Mail className="w-6 h-6 text-sage-green group-hover:animate-bounce" />
                 </div>
-                <h3 className="font-semibold mb-2 group-hover:text-sky-blue transition-colors duration-300 text-slate-gray">
+                <h3 className="font-semibold mb-2 group-hover:text-sage-green transition-colors duration-300 text-deep-black">
                   Email
                 </h3>
-                <p className="text-slate-gray/80">hello@pitchform.co</p>
+                <p className="text-cool-grey">hello@pitchform.co</p>
               </Card>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={200}>
-              <Card className="p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-cloud-white border-slate-gray/20">
-                <div className="w-12 h-12 bg-sky-blue/10 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-sky-blue/20 transition-all duration-300">
-                  <Phone className="w-6 h-6 text-sky-blue group-hover:animate-bounce" />
+              <Card className="p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-warm-ivory border-sage-green/20">
+                <div className="w-12 h-12 bg-sage-green/10 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-sage-green/20 transition-all duration-300">
+                  <Phone className="w-6 h-6 text-sage-green group-hover:animate-bounce" />
                 </div>
-                <h3 className="font-semibold mb-2 group-hover:text-sky-blue transition-colors duration-300 text-slate-gray">
+                <h3 className="font-semibold mb-2 group-hover:text-sage-green transition-colors duration-300 text-deep-black">
                   Phone
                 </h3>
-                <p className="text-slate-gray/80">983 457 7788</p>
+                <p className="text-cool-grey">983 457 7788</p>
               </Card>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-right" delay={300}>
-              <Card className="p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-cloud-white border-deep-navy/20">
-                <div className="w-12 h-12 bg-sky-blue/10 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-sky-blue/20 transition-all duration-300">
-                  <Globe className="w-6 h-6 text-sky-blue group-hover:animate-bounce" />
+              <Card className="p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-warm-ivory border-sage-green/20">
+                <div className="w-12 h-12 bg-sage-green/10 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-sage-green/20 transition-all duration-300">
+                  <Globe className="w-6 h-6 text-sage-green group-hover:animate-bounce" />
                 </div>
-                <h3 className="font-semibold mb-2 group-hover:text-sky-blue transition-colors duration-300 text-slate-gray">
+                <h3 className="font-semibold mb-2 group-hover:text-sage-green transition-colors duration-300 text-deep-black">
                   Website
                 </h3>
-                <p className="text-slate-gray/80">pitchform.co</p>
+                <p className="text-cool-grey">pitchform.co</p>
               </Card>
             </AnimatedSection>
           </div>
@@ -532,7 +528,7 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
-                className="bg-sky-blue hover:bg-sky-blue/90 text-cloud-white hover:scale-105 hover:shadow-xl transition-all duration-300 group"
+                className="bg-sage-green hover:bg-sage-green/90 text-warm-ivory hover:scale-105 hover:shadow-xl transition-all duration-300 group"
               >
                 <Mail className="mr-2 w-4 h-4 group-hover:animate-bounce" />
                 Get In Touch
@@ -540,7 +536,7 @@ export default function HomePage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-slate-gray text-slate-gray hover:bg-slate-gray hover:text-cloud-white hover:scale-105 hover:shadow-lg transition-all duration-300 group bg-transparent"
+                className="border-cool-grey text-cool-grey hover:bg-cool-grey hover:text-warm-ivory hover:scale-105 hover:shadow-lg transition-all duration-300 group bg-transparent"
               >
                 <Heart className="mr-2 w-4 h-4 group-hover:animate-pulse text-red-500" />
                 Support Our Mission
@@ -552,25 +548,25 @@ export default function HomePage() {
 
       {/* Footer */}
       <AnimatedSection
-        className="bg-deep-navy text-cloud-white py-12 px-4 relative overflow-hidden"
+        className="bg-deep-black text-warm-ivory py-12 px-4 relative overflow-hidden"
         animation="fade-up"
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-deep-navy to-slate-gray animate-gradient bg-300%"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-deep-black to-cool-grey animate-gradient bg-300%"></div>
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 mb-4 md:mb-0 group">
-              <div className="w-8 h-8 bg-gradient-to-br from-sky-blue to-deep-navy rounded-lg flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
-                <Brain className="w-5 h-5 text-cloud-white animate-pulse" />
+              <div className="w-8 h-8 bg-gradient-to-br from-sage-green to-deep-black rounded-lg flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                <Brain className="w-5 h-5 text-warm-ivory animate-pulse" />
               </div>
               <div>
-                <h3 className="text-lg font-bold group-hover:text-sky-blue transition-colors duration-300">
+                <h3 className="text-lg font-bold group-hover:text-sage-green transition-colors duration-300">
                   EDVANCE PAKISTAN
                 </h3>
-                <p className="text-sm text-cloud-white/70">Empowering Personalized Learning</p>
+                <p className="text-sm text-warm-ivory/70">Empowering Personalized Learning</p>
               </div>
             </div>
             <div className="text-center md:text-right">
-              <p className="text-cloud-white/70 text-sm hover:text-cloud-white transition-colors duration-300">
+              <p className="text-warm-ivory/70 text-sm hover:text-warm-ivory transition-colors duration-300">
                 © 2025 EdVance Pakistan. Transforming education through AI.
               </p>
             </div>

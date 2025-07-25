@@ -21,22 +21,22 @@ const config = {
     extend: {
       colors: {
         // Your custom palette
-        "cloud-white": "#F7FAFC",
-        "sky-blue": "#3182CE",
-        "slate-gray": "#4A5568",
-        "deep-navy": "#1F2D3D",
+        "sage-green": "#446461",
+        "deep-black": "#000000",
+        "warm-ivory": "#f2ede9",
+        "cool-grey": "#6f808a",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#3182CE", // Sky Blue
-          foreground: "#F7FAFC", // Cloud White
+          DEFAULT: "#446461", // Green
+          foreground: "#f2ede9", // Ivory
         },
         secondary: {
-          DEFAULT: "#1F2D3D", // Deep Navy
-          foreground: "#F7FAFC", // Cloud White
+          DEFAULT: "#000000", // Black
+          foreground: "#f2ede9", // Ivory
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -47,8 +47,8 @@ const config = {
           foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "#3182CE", // Sky Blue
-          foreground: "#F7FAFC", // Cloud White
+          DEFAULT: "#446461", // Green
+          foreground: "#f2ede9", // Ivory
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",

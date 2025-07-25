@@ -4,56 +4,56 @@
 
 @layer base {
   :root {
-    --background: 247 250 252; /* Cloud White #F7FAFC */
-    --foreground: 74 85 104; /* Slate Gray #4A5568 */
-    --card: 247 250 252; /* Cloud White #F7FAFC */
-    --card-foreground: 74 85 104; /* Slate Gray #4A5568 */
-    --popover: 247 250 252; /* Cloud White #F7FAFC */
-    --popover-foreground: 74 85 104; /* Slate Gray #4A5568 */
-    --primary: 49 130 206; /* Sky Blue #3182CE */
-    --primary-foreground: 247 250 252; /* Cloud White #F7FAFC */
-    --secondary: 31 45 61; /* Deep Navy #1F2D3D */
-    --secondary-foreground: 247 250 252; /* Cloud White #F7FAFC */
+    --background: 242 237 233; /* Ivory #f2ede9 */
+    --foreground: 0 0 0; /* Black #000000 */
+    --card: 242 237 233; /* Ivory #f2ede9 */
+    --card-foreground: 0 0 0; /* Black #000000 */
+    --popover: 242 237 233; /* Ivory #f2ede9 */
+    --popover-foreground: 0 0 0; /* Black #000000 */
+    --primary: 68 100 97; /* Green #446461 */
+    --primary-foreground: 242 237 233; /* Ivory #f2ede9 */
+    --secondary: 111 128 138; /* Grey #6f808a */
+    --secondary-foreground: 242 237 233; /* Ivory #f2ede9 */
     --muted: 226 232 240;
-    --muted-foreground: 74 85 104; /* Slate Gray #4A5568 */
-    --accent: 49 130 206; /* Sky Blue #3182CE */
-    --accent-foreground: 247 250 252; /* Cloud White #F7FAFC */
+    --muted-foreground: 111 128 138; /* Grey #6f808a */
+    --accent: 68 100 97; /* Green #446461 */
+    --accent-foreground: 242 237 233; /* Ivory #f2ede9 */
     --destructive: 239 68 68;
-    --destructive-foreground: 247 250 252; /* Cloud White #F7FAFC */
+    --destructive-foreground: 242 237 233; /* Ivory #f2ede9 */
     --border: 226 232 240;
     --input: 226 232 240;
-    --ring: 49 130 206; /* Sky Blue #3182CE */
+    --ring: 68 100 97; /* Green #446461 */
     --radius: 0.5rem;
-    --chart-1: 49 130 206; /* Sky Blue #3182CE */
-    --chart-2: 74 85 104; /* Slate Gray #4A5568 */
-    --chart-3: 31 45 61; /* Deep Navy #1F2D3D */
+    --chart-1: 68 100 97; /* Green #446461 */
+    --chart-2: 111 128 138; /* Grey #6f808a */
+    --chart-3: 0 0 0; /* Black #000000 */
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
   }
 
   .dark {
-    --background: 31 45 61; /* Deep Navy #1F2D3D */
-    --foreground: 247 250 252; /* Cloud White #F7FAFC */
-    --card: 31 45 61; /* Deep Navy #1F2D3D */
-    --card-foreground: 247 250 252; /* Cloud White #F7FAFC */
-    --popover: 31 45 61; /* Deep Navy #1F2D3D */
-    --popover-foreground: 247 250 252; /* Cloud White #F7FAFC */
-    --primary: 49 130 206; /* Sky Blue #3182CE */
-    --primary-foreground: 247 250 252; /* Cloud White #F7FAFC */
-    --secondary: 74 85 104; /* Slate Gray #4A5568 */
-    --secondary-foreground: 247 250 252; /* Cloud White #F7FAFC */
-    --muted: 74 85 104; /* Slate Gray #4A5568 */
-    --muted-foreground: 247 250 252; /* Cloud White #F7FAFC */
-    --accent: 49 130 206; /* Sky Blue #3182CE */
-    --accent-foreground: 247 250 252; /* Cloud White #F7FAFC */
+    --background: 0 0 0; /* Black #000000 */
+    --foreground: 242 237 233; /* Ivory #f2ede9 */
+    --card: 0 0 0; /* Black #000000 */
+    --card-foreground: 242 237 233; /* Ivory #f2ede9 */
+    --popover: 0 0 0; /* Black #000000 */
+    --popover-foreground: 242 237 233; /* Ivory #f2ede9 */
+    --primary: 68 100 97; /* Green #446461 */
+    --primary-foreground: 242 237 233; /* Ivory #f2ede9 */
+    --secondary: 111 128 138; /* Grey #6f808a */
+    --secondary-foreground: 242 237 233; /* Ivory #f2ede9 */
+    --muted: 111 128 138; /* Grey #6f808a */
+    --muted-foreground: 242 237 233; /* Ivory #f2ede9 */
+    --accent: 68 100 97; /* Green #446461 */
+    --accent-foreground: 242 237 233; /* Ivory #f2ede9 */
     --destructive: 239 68 68;
-    --destructive-foreground: 247 250 252; /* Cloud White #F7FAFC */
-    --border: 74 85 104; /* Slate Gray #4A5568 */
-    --input: 74 85 104; /* Slate Gray #4A5568 */
-    --ring: 49 130 206; /* Sky Blue #3182CE */
-    --chart-1: 49 130 206; /* Sky Blue #3182CE */
-    --chart-2: 74 85 104; /* Slate Gray #4A5568 */
-    --chart-3: 31 45 61; /* Deep Navy #1F2D3D */
+    --destructive-foreground: 242 237 233; /* Ivory #f2ede9 */
+    --border: 111 128 138; /* Grey #6f808a */
+    --input: 111 128 138; /* Grey #6f808a */
+    --ring: 68 100 97; /* Green #446461 */
+    --chart-1: 68 100 97; /* Green #446461 */
+    --chart-2: 111 128 138; /* Grey #6f808a */
+    --chart-3: 0 0 0; /* Black #000000 */
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
