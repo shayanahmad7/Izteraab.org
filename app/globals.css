@@ -10,9 +10,9 @@
     --card-foreground: 30 41 59; /* Slate #1e293b */
     --popover: 250 248 246; /* Warm Ivory #faf8f6 */
     --popover-foreground: 30 41 59; /* Slate #1e293b */
-    --primary: 124 58 237; /* Deep Violet #7c3aed */
+    --primary: 99 102 241; /* Deep Violet #6366f1 */
     --primary-foreground: 250 248 246; /* Warm Ivory #faf8f6 */
-    --secondary: 225 29 72; /* Rose Pink #e11d48 */
+    --secondary: 37 99 235; /* Royal Blue #2563eb */
     --secondary-foreground: 250 248 246; /* Warm Ivory #faf8f6 */
     --muted: 226 232 240;
     --muted-foreground: 100 116 139; /* Cool Grey #64748b */
@@ -22,11 +22,11 @@
     --destructive-foreground: 250 248 246; /* Warm Ivory #faf8f6 */
     --border: 226 232 240;
     --input: 226 232 240;
-    --ring: 124 58 237; /* Deep Violet #7c3aed */
+    --ring: 99 102 241; /* Deep Violet #6366f1 */
     --radius: 0.5rem;
-    --chart-1: 124 58 237; /* Deep Violet #7c3aed */
-    --chart-2: 225 29 72; /* Rose Pink #e11d48 */
-    --chart-3: 37 99 235; /* Royal Blue #2563eb */
+    --chart-1: 99 102 241; /* Deep Violet #6366f1 */
+    --chart-2: 37 99 235; /* Royal Blue #2563eb */
+    --chart-3: 30 41 59; /* Slate #1e293b */
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
   }
@@ -38,9 +38,9 @@
     --card-foreground: 250 248 246; /* Warm Ivory #faf8f6 */
     --popover: 30 41 59; /* Slate #1e293b */
     --popover-foreground: 250 248 246; /* Warm Ivory #faf8f6 */
-    --primary: 124 58 237; /* Deep Violet #7c3aed */
+    --primary: 99 102 241; /* Deep Violet #6366f1 */
     --primary-foreground: 250 248 246; /* Warm Ivory #faf8f6 */
-    --secondary: 225 29 72; /* Rose Pink #e11d48 */
+    --secondary: 37 99 235; /* Royal Blue #2563eb */
     --secondary-foreground: 250 248 246; /* Warm Ivory #faf8f6 */
     --muted: 100 116 139; /* Cool Grey #64748b */
     --muted-foreground: 250 248 246; /* Warm Ivory #faf8f6 */
@@ -50,10 +50,10 @@
     --destructive-foreground: 250 248 246; /* Warm Ivory #faf8f6 */
     --border: 100 116 139; /* Cool Grey #64748b */
     --input: 100 116 139; /* Cool Grey #64748b */
-    --ring: 124 58 237; /* Deep Violet #7c3aed */
-    --chart-1: 124 58 237; /* Deep Violet #7c3aed */
-    --chart-2: 225 29 72; /* Rose Pink #e11d48 */
-    --chart-3: 37 99 235; /* Royal Blue #2563eb */
+    --ring: 99 102 241; /* Deep Violet #6366f1 */
+    --chart-1: 99 102 241; /* Deep Violet #6366f1 */
+    --chart-2: 37 99 235; /* Royal Blue #2563eb */
+    --chart-3: 30 41 59; /* Slate #1e293b */
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }

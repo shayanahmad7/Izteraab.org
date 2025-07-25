@@ -35,17 +35,17 @@ export default function HomePage() {
       {/* Floating Background Elements */}
       <div className="fixed inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-deep-violet/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-96 h-96 bg-rose-pink/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-royal-blue/12 rounded-full blur-3xl animate-pulse delay-2000"></div>
+        <div className="absolute top-40 right-20 w-96 h-96 bg-royal-blue/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-deep-violet/8 rounded-full blur-3xl animate-pulse delay-2000"></div>
       </div>
 
       {/* Header */}
-      <header className="border-b border-deep-violet/20 bg-gradient-to-r from-deep-violet/5 via-rose-pink/8 to-royal-blue/10 backdrop-blur-sm sticky top-0 z-50 transition-all duration-300">
+      <header className="border-b border-deep-violet/20 bg-gradient-to-r from-deep-violet/5 to-royal-blue/10 backdrop-blur-sm sticky top-0 z-50 transition-all duration-300">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div
             className={`flex items-center space-x-2 transition-all duration-700 ${isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"}`}
           >
-            <div className="w-8 h-8 bg-gradient-to-br from-deep-violet via-rose-pink to-royal-blue rounded-lg flex items-center justify-center hover:scale-110 transition-transform duration-300 hover:rotate-12 shadow-lg">
+            <div className="w-8 h-8 bg-gradient-to-br from-deep-violet to-royal-blue rounded-lg flex items-center justify-center hover:scale-110 transition-transform duration-300 hover:rotate-12 shadow-lg">
               <Brain className="w-5 h-5 text-warm-ivory animate-pulse" />
             </div>
             <div>
@@ -107,7 +107,7 @@ export default function HomePage() {
       <AnimatedSection className="py-20 px-4 relative" animation="fade-up">
         <div className="container mx-auto text-center max-w-4xl relative z-10">
           <Badge
-            className={`mb-6 bg-gradient-to-r from-deep-violet/10 via-rose-pink/12 to-royal-blue/15 text-slate-dark border-deep-violet/20 hover:bg-gradient-to-r hover:from-deep-violet/20 hover:via-rose-pink/20 hover:to-royal-blue/25 hover:scale-105 transition-all duration-500 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+            className={`mb-6 bg-gradient-to-r from-deep-violet/10 to-royal-blue/15 text-slate-dark border-deep-violet/20 hover:bg-gradient-to-r hover:from-deep-violet/20 hover:to-royal-blue/25 hover:scale-105 transition-all duration-500 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
           >
             <Sparkles className="w-3 h-3 mr-1 animate-spin text-deep-violet" />
             Transforming Education in Pakistan
@@ -116,7 +116,7 @@ export default function HomePage() {
             className={`text-4xl md:text-6xl font-bold text-slate-dark mb-6 leading-tight transition-all duration-700 delay-200 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
           >
             Empowering{" "}
-            <span className="bg-gradient-to-r from-deep-violet via-rose-pink to-royal-blue bg-clip-text text-transparent animate-gradient bg-300% bg-size-200">
+            <span className="bg-gradient-to-r from-deep-violet to-royal-blue bg-clip-text text-transparent animate-gradient bg-300% bg-size-200">
               Personalized Learning
             </span>{" "}
             in Pakistan
@@ -142,7 +142,7 @@ export default function HomePage() {
             </Button>
             <Button
               size="lg"
-              className="bg-rose-pink hover:bg-rose-pink/90 text-warm-ivory hover:scale-105 hover:shadow-xl transition-all duration-300 group shadow-rose-pink/20"
+              className="bg-royal-blue hover:bg-royal-blue/90 text-warm-ivory hover:scale-105 hover:shadow-xl transition-all duration-300 group shadow-royal-blue/20"
               asChild
             >
               <Link href="#solution">
@@ -152,7 +152,8 @@ export default function HomePage() {
             </Button>
             <Button
               size="lg"
-              className="bg-royal-blue hover:bg-royal-blue/90 text-warm-ivory hover:scale-105 hover:shadow-xl transition-all duration-300 group shadow-royal-blue/20"
+              variant="outline"
+              className="border-deep-violet text-deep-violet hover:bg-deep-violet hover:text-warm-ivory hover:scale-105 hover:shadow-lg transition-all duration-300 bg-transparent"
               asChild
             >
               <Link href="#contact">Partner With Us</Link>
@@ -163,10 +164,10 @@ export default function HomePage() {
 
       {/* Mission Statement */}
       <AnimatedSection
-        className="py-16 bg-gradient-to-r from-deep-violet via-rose-pink to-royal-blue text-warm-ivory relative overflow-hidden"
+        className="py-16 bg-gradient-to-r from-deep-violet to-royal-blue text-warm-ivory relative overflow-hidden"
         animation="scale-up"
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-deep-violet/90 via-rose-pink/85 to-royal-blue/90 animate-gradient bg-300%"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-deep-violet/90 to-royal-blue/90 animate-gradient bg-300%"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 flex items-center justify-center gap-3">
             <Star className="w-8 h-8 animate-pulse" />
@@ -195,7 +196,7 @@ export default function HomePage() {
             <AnimatedSection animation="fade-left" delay={100}>
               <Card className="border-2 border-deep-violet/20 hover:border-deep-violet/40 hover:shadow-xl transition-all duration-500 hover:scale-105 group h-full bg-warm-ivory shadow-lg">
                 <CardHeader>
-                  <div className="w-12 h-12 bg-gradient-to-br from-deep-violet/10 to-rose-pink/15 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-br from-deep-violet/10 to-royal-blue/15 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                     <Target className="w-6 h-6 text-deep-violet animate-pulse" />
                   </div>
                   <CardTitle className="group-hover:text-deep-violet transition-colors duration-300 text-slate-dark">
@@ -212,12 +213,12 @@ export default function HomePage() {
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={200}>
-              <Card className="border-2 border-rose-pink/30 hover:border-rose-pink/50 hover:shadow-xl transition-all duration-500 hover:scale-105 group h-full bg-warm-ivory shadow-lg">
+              <Card className="border-2 border-royal-blue/25 hover:border-royal-blue/45 hover:shadow-xl transition-all duration-500 hover:scale-105 group h-full bg-warm-ivory shadow-lg">
                 <CardHeader>
-                  <div className="w-12 h-12 bg-gradient-to-br from-rose-pink/15 to-royal-blue/12 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
-                    <Users className="w-6 h-6 text-rose-pink animate-pulse" />
+                  <div className="w-12 h-12 bg-gradient-to-br from-royal-blue/12 to-deep-violet/10 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                    <Users className="w-6 h-6 text-royal-blue animate-pulse" />
                   </div>
-                  <CardTitle className="group-hover:text-rose-pink transition-colors duration-300 text-slate-dark">
+                  <CardTitle className="group-hover:text-royal-blue transition-colors duration-300 text-slate-dark">
                     Teacher Empowerment
                   </CardTitle>
                 </CardHeader>
@@ -231,12 +232,12 @@ export default function HomePage() {
             </AnimatedSection>
 
             <AnimatedSection animation="fade-right" delay={300}>
-              <Card className="border-2 border-royal-blue/25 hover:border-royal-blue/45 hover:shadow-xl transition-all duration-500 hover:scale-105 group h-full bg-warm-ivory shadow-lg">
+              <Card className="border-2 border-deep-violet/20 hover:border-deep-violet/40 hover:shadow-xl transition-all duration-500 hover:scale-105 group h-full bg-warm-ivory shadow-lg">
                 <CardHeader>
-                  <div className="w-12 h-12 bg-gradient-to-br from-royal-blue/12 to-deep-violet/10 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
-                    <Brain className="w-6 h-6 text-royal-blue animate-pulse" />
+                  <div className="w-12 h-12 bg-gradient-to-br from-deep-violet/10 to-royal-blue/15 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                    <Brain className="w-6 h-6 text-deep-violet animate-pulse" />
                   </div>
-                  <CardTitle className="group-hover:text-royal-blue transition-colors duration-300 text-slate-dark">
+                  <CardTitle className="group-hover:text-deep-violet transition-colors duration-300 text-slate-dark">
                     AI-Powered
                   </CardTitle>
                 </CardHeader>
@@ -255,7 +256,7 @@ export default function HomePage() {
       {/* Solution Section */}
       <AnimatedSection
         id="solution"
-        className="py-20 px-4 bg-gradient-to-br from-deep-violet/5 via-rose-pink/8 to-royal-blue/10 relative"
+        className="py-20 px-4 bg-gradient-to-br from-deep-violet/5 to-royal-blue/10 relative"
         animation="slide-up"
       >
         <div className="container mx-auto max-w-6xl">
@@ -269,7 +270,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <AnimatedSection animation="fade-up" delay={100}>
               <Card className="text-center p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-warm-ivory border-deep-violet/20 shadow-lg">
-                <div className="w-16 h-16 bg-gradient-to-br from-deep-violet/10 to-rose-pink/15 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-deep-violet/20 group-hover:to-rose-pink/25 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-deep-violet/10 to-royal-blue/15 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-deep-violet/20 group-hover:to-royal-blue/25 transition-all duration-300">
                   <Target className="w-8 h-8 text-deep-violet group-hover:rotate-12 transition-transform duration-300 animate-pulse" />
                 </div>
                 <h3 className="font-semibold text-lg mb-2 group-hover:text-deep-violet transition-colors duration-300 text-slate-dark">
@@ -282,11 +283,11 @@ export default function HomePage() {
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={200}>
-              <Card className="text-center p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-warm-ivory border-rose-pink/30 shadow-lg">
-                <div className="w-16 h-16 bg-gradient-to-br from-rose-pink/15 to-royal-blue/12 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-rose-pink/25 group-hover:to-royal-blue/20 transition-all duration-300">
-                  <Brain className="w-8 h-8 text-rose-pink group-hover:rotate-12 transition-transform duration-300 animate-pulse" />
+              <Card className="text-center p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-warm-ivory border-royal-blue/25 shadow-lg">
+                <div className="w-16 h-16 bg-gradient-to-br from-royal-blue/12 to-deep-violet/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-royal-blue/20 group-hover:to-deep-violet/20 transition-all duration-300">
+                  <Brain className="w-8 h-8 text-royal-blue group-hover:rotate-12 transition-transform duration-300 animate-pulse" />
                 </div>
-                <h3 className="font-semibold text-lg mb-2 group-hover:text-rose-pink transition-colors duration-300 text-slate-dark">
+                <h3 className="font-semibold text-lg mb-2 group-hover:text-royal-blue transition-colors duration-300 text-slate-dark">
                   AI Tools
                 </h3>
                 <p className="text-cool-grey text-sm">
@@ -296,11 +297,11 @@ export default function HomePage() {
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={300}>
-              <Card className="text-center p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-warm-ivory border-royal-blue/25 shadow-lg">
-                <div className="w-16 h-16 bg-gradient-to-br from-royal-blue/12 to-deep-violet/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-royal-blue/20 group-hover:to-deep-violet/20 transition-all duration-300">
-                  <Users className="w-8 h-8 text-royal-blue group-hover:rotate-12 transition-transform duration-300 animate-pulse" />
+              <Card className="text-center p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-warm-ivory border-deep-violet/20 shadow-lg">
+                <div className="w-16 h-16 bg-gradient-to-br from-deep-violet/10 to-royal-blue/15 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-deep-violet/20 group-hover:to-royal-blue/25 transition-all duration-300">
+                  <Users className="w-8 h-8 text-deep-violet group-hover:rotate-12 transition-transform duration-300 animate-pulse" />
                 </div>
-                <h3 className="font-semibold text-lg mb-2 group-hover:text-royal-blue transition-colors duration-300 text-slate-dark">
+                <h3 className="font-semibold text-lg mb-2 group-hover:text-deep-violet transition-colors duration-300 text-slate-dark">
                   Teacher Training
                 </h3>
                 <p className="text-cool-grey text-sm">
@@ -310,11 +311,11 @@ export default function HomePage() {
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={400}>
-              <Card className="text-center p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-warm-ivory border-deep-violet/20 shadow-lg">
-                <div className="w-16 h-16 bg-gradient-to-br from-deep-violet/10 via-rose-pink/12 to-royal-blue/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-deep-violet/20 group-hover:via-rose-pink/20 group-hover:to-royal-blue/20 transition-all duration-300">
-                  <BookOpen className="w-8 h-8 text-deep-violet group-hover:rotate-12 transition-transform duration-300 animate-pulse" />
+              <Card className="text-center p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-warm-ivory border-royal-blue/25 shadow-lg">
+                <div className="w-16 h-16 bg-gradient-to-br from-royal-blue/12 to-deep-violet/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-royal-blue/20 group-hover:to-deep-violet/20 transition-all duration-300">
+                  <BookOpen className="w-8 h-8 text-royal-blue group-hover:rotate-12 transition-transform duration-300 animate-pulse" />
                 </div>
-                <h3 className="font-semibold text-lg mb-2 group-hover:text-deep-violet transition-colors duration-300 text-slate-dark">
+                <h3 className="font-semibold text-lg mb-2 group-hover:text-royal-blue transition-colors duration-300 text-slate-dark">
                   Existing Infrastructure
                 </h3>
                 <p className="text-cool-grey text-sm">Leverages existing Chromebooks, LMS, and lab infrastructure</p>
@@ -394,24 +395,24 @@ export default function HomePage() {
             </AnimatedSection>
 
             <AnimatedSection animation="fade-left" delay={400}>
-              <Card className="p-8 bg-gradient-to-br from-deep-violet/5 via-rose-pink/8 to-royal-blue/10 border-2 border-deep-violet/20 hover:shadow-xl transition-all duration-500 hover:scale-105 shadow-lg">
+              <Card className="p-8 bg-gradient-to-br from-deep-violet/5 to-royal-blue/10 border-2 border-deep-violet/20 hover:shadow-xl transition-all duration-500 hover:scale-105 shadow-lg">
                 <CardHeader className="pb-4">
                   <CardTitle className="text-xl flex items-center text-slate-dark">
-                    <Sparkles className="w-5 h-5 mr-2 text-rose-pink animate-spin" />
+                    <Sparkles className="w-5 h-5 mr-2 text-royal-blue animate-spin" />
                     Teacher Enablement
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="flex items-center space-x-3 group hover:translate-x-2 transition-transform duration-300">
-                    <Lightbulb className="w-5 h-5 text-rose-pink group-hover:animate-bounce" />
+                    <Lightbulb className="w-5 h-5 text-royal-blue group-hover:animate-bounce" />
                     <span className="text-cool-grey">Online training & ongoing mentorship</span>
                   </div>
                   <div className="flex items-center space-x-3 group hover:translate-x-2 transition-transform duration-300">
-                    <TrendingUp className="w-5 h-5 text-royal-blue group-hover:animate-bounce" />
+                    <TrendingUp className="w-5 h-5 text-deep-violet group-hover:animate-bounce" />
                     <span className="text-cool-grey">Teachers selected based on tech-readiness & motivation</span>
                   </div>
                   <div className="flex items-center space-x-3 group hover:translate-x-2 transition-transform duration-300">
-                    <Heart className="w-5 h-5 text-deep-violet group-hover:animate-bounce" />
+                    <Heart className="w-5 h-5 text-royal-blue group-hover:animate-bounce" />
                     <span className="text-cool-grey">Senior students trained as assistants to support class flow</span>
                   </div>
                 </CardContent>
@@ -424,10 +425,10 @@ export default function HomePage() {
       {/* Pilot Project */}
       <AnimatedSection
         id="pilot"
-        className="py-20 px-4 bg-gradient-to-r from-deep-violet via-rose-pink to-royal-blue text-warm-ivory relative overflow-hidden"
+        className="py-20 px-4 bg-gradient-to-r from-deep-violet to-royal-blue text-warm-ivory relative overflow-hidden"
         animation="scale-up"
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-deep-violet/90 via-rose-pink/85 to-royal-blue/90 animate-gradient bg-300%"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-deep-violet/90 to-royal-blue/90 animate-gradient bg-300%"></div>
         <div className="container mx-auto max-w-4xl text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">Pilot Project</h2>
           <p className="text-xl mb-12 opacity-90">
@@ -489,7 +490,7 @@ export default function HomePage() {
       {/* Contact Section */}
       <AnimatedSection
         id="contact"
-        className="py-20 px-4 bg-gradient-to-br from-deep-violet/5 via-rose-pink/8 to-royal-blue/10"
+        className="py-20 px-4 bg-gradient-to-br from-deep-violet/5 to-royal-blue/10"
         animation="fade-up"
       >
         <div className="container mx-auto max-w-4xl text-center">
@@ -501,7 +502,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             <AnimatedSection animation="fade-left" delay={100}>
               <Card className="p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-warm-ivory border-deep-violet/20 shadow-lg">
-                <div className="w-12 h-12 bg-gradient-to-br from-deep-violet/10 to-rose-pink/15 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-deep-violet/20 group-hover:to-rose-pink/25 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-br from-deep-violet/10 to-royal-blue/15 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-deep-violet/20 group-hover:to-royal-blue/25 transition-all duration-300">
                   <Mail className="w-6 h-6 text-deep-violet group-hover:animate-bounce" />
                 </div>
                 <h3 className="font-semibold mb-2 group-hover:text-deep-violet transition-colors duration-300 text-slate-dark">
@@ -512,11 +513,11 @@ export default function HomePage() {
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={200}>
-              <Card className="p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-warm-ivory border-rose-pink/30 shadow-lg">
-                <div className="w-12 h-12 bg-gradient-to-br from-rose-pink/15 to-royal-blue/12 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-rose-pink/25 group-hover:to-royal-blue/20 transition-all duration-300">
-                  <Phone className="w-6 h-6 text-rose-pink group-hover:animate-bounce" />
+              <Card className="p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-warm-ivory border-royal-blue/25 shadow-lg">
+                <div className="w-12 h-12 bg-gradient-to-br from-royal-blue/12 to-deep-violet/10 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-royal-blue/20 group-hover:to-deep-violet/20 transition-all duration-300">
+                  <Phone className="w-6 h-6 text-royal-blue group-hover:animate-bounce" />
                 </div>
-                <h3 className="font-semibold mb-2 group-hover:text-rose-pink transition-colors duration-300 text-slate-dark">
+                <h3 className="font-semibold mb-2 group-hover:text-royal-blue transition-colors duration-300 text-slate-dark">
                   Phone
                 </h3>
                 <p className="text-cool-grey">983 457 7788</p>
@@ -524,11 +525,11 @@ export default function HomePage() {
             </AnimatedSection>
 
             <AnimatedSection animation="fade-right" delay={300}>
-              <Card className="p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-warm-ivory border-royal-blue/25 shadow-lg">
-                <div className="w-12 h-12 bg-gradient-to-br from-royal-blue/12 to-deep-violet/10 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-royal-blue/20 group-hover:to-deep-violet/20 transition-all duration-300">
-                  <Globe className="w-6 h-6 text-royal-blue group-hover:animate-bounce" />
+              <Card className="p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-warm-ivory border-deep-violet/20 shadow-lg">
+                <div className="w-12 h-12 bg-gradient-to-br from-deep-violet/10 to-royal-blue/15 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-deep-violet/20 group-hover:to-royal-blue/25 transition-all duration-300">
+                  <Globe className="w-6 h-6 text-deep-violet group-hover:animate-bounce" />
                 </div>
-                <h3 className="font-semibold mb-2 group-hover:text-royal-blue transition-colors duration-300 text-slate-dark">
+                <h3 className="font-semibold mb-2 group-hover:text-deep-violet transition-colors duration-300 text-slate-dark">
                   Website
                 </h3>
                 <p className="text-cool-grey">pitchform.co</p>
@@ -547,7 +548,7 @@ export default function HomePage() {
               </Button>
               <Button
                 size="lg"
-                className="bg-rose-pink hover:bg-rose-pink/90 text-warm-ivory hover:scale-105 hover:shadow-xl transition-all duration-300 group shadow-rose-pink/20"
+                className="bg-royal-blue hover:bg-royal-blue/90 text-warm-ivory hover:scale-105 hover:shadow-xl transition-all duration-300 group shadow-royal-blue/20"
               >
                 <Heart className="mr-2 w-4 h-4 group-hover:animate-pulse text-red-500" />
                 Support Our Mission
@@ -559,18 +560,18 @@ export default function HomePage() {
 
       {/* Footer */}
       <AnimatedSection
-        className="bg-gradient-to-r from-slate-dark via-deep-violet to-royal-blue text-warm-ivory py-12 px-4 relative overflow-hidden"
+        className="bg-gradient-to-r from-slate-dark to-deep-violet text-warm-ivory py-12 px-4 relative overflow-hidden"
         animation="fade-up"
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-dark via-deep-violet to-royal-blue animate-gradient bg-300%"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-dark to-deep-violet animate-gradient bg-300%"></div>
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 mb-4 md:mb-0 group">
-              <div className="w-8 h-8 bg-gradient-to-br from-deep-violet via-rose-pink to-royal-blue rounded-lg flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 shadow-lg">
+              <div className="w-8 h-8 bg-gradient-to-br from-deep-violet to-royal-blue rounded-lg flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 shadow-lg">
                 <Brain className="w-5 h-5 text-warm-ivory animate-pulse" />
               </div>
               <div>
-                <h3 className="text-lg font-bold group-hover:text-rose-pink transition-colors duration-300">
+                <h3 className="text-lg font-bold group-hover:text-royal-blue transition-colors duration-300">
                   EDVANCE PAKISTAN
                 </h3>
                 <p className="text-sm text-warm-ivory/70">Empowering Personalized Learning</p>

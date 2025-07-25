@@ -20,9 +20,8 @@ const config = {
     },
     extend: {
       colors: {
-        // Sophisticated purple, pink, blue palette
-        "deep-violet": "#7c3aed",
-        "rose-pink": "#e11d48",
+        // Clean professional purple & blue palette
+        "deep-violet": "#6366f1",
         "royal-blue": "#2563eb",
         "warm-ivory": "#faf8f6",
         "slate-dark": "#1e293b",
@@ -33,11 +32,11 @@ const config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#7c3aed", // Deep Violet
+          DEFAULT: "#6366f1", // Deep Violet
           foreground: "#faf8f6", // Warm Ivory
         },
         secondary: {
-          DEFAULT: "#e11d48", // Rose Pink
+          DEFAULT: "#2563eb", // Royal Blue
           foreground: "#faf8f6", // Warm Ivory
         },
         destructive: {
