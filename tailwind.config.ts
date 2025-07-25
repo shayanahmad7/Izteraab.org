@@ -20,9 +20,9 @@ const config = {
     },
     extend: {
       colors: {
-        // Your vibrant custom palette
-        "emerald-green": "#22c55e",
-        "golden-yellow": "#f59e0b",
+        // Your sophisticated custom palette
+        "forest-green": "#40916c",
+        "warm-beige": "#d4a574",
         "warm-ivory": "#faf8f6",
         "slate-dark": "#1e293b",
         "cool-grey": "#64748b",
@@ -32,11 +32,11 @@ const config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#22c55e", // Emerald Green
+          DEFAULT: "#40916c", // Forest Green
           foreground: "#faf8f6", // Warm Ivory
         },
         secondary: {
-          DEFAULT: "#f59e0b", // Golden Yellow
+          DEFAULT: "#d4a574", // Warm Beige
           foreground: "#1e293b", // Slate Dark
         },
         destructive: {
@@ -48,7 +48,7 @@ const config = {
           foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "#f59e0b", // Golden Yellow
+          DEFAULT: "#d4a574", // Warm Beige
           foreground: "#1e293b", // Slate Dark
         },
         popover: {

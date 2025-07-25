@@ -10,22 +10,22 @@
     --card-foreground: 30 41 59; /* Slate #1e293b */
     --popover: 250 248 246; /* Warm Ivory #faf8f6 */
     --popover-foreground: 30 41 59; /* Slate #1e293b */
-    --primary: 34 197 94; /* Emerald Green #22c55e */
+    --primary: 64 145 108; /* Forest Green #40916c */
     --primary-foreground: 250 248 246; /* Warm Ivory #faf8f6 */
-    --secondary: 245 158 11; /* Golden Yellow #f59e0b */
+    --secondary: 212 165 116; /* Warm Beige #d4a574 */
     --secondary-foreground: 30 41 59; /* Slate #1e293b */
     --muted: 226 232 240;
     --muted-foreground: 100 116 139; /* Cool Grey #64748b */
-    --accent: 245 158 11; /* Golden Yellow #f59e0b */
+    --accent: 212 165 116; /* Warm Beige #d4a574 */
     --accent-foreground: 30 41 59; /* Slate #1e293b */
     --destructive: 239 68 68;
     --destructive-foreground: 250 248 246; /* Warm Ivory #faf8f6 */
     --border: 226 232 240;
     --input: 226 232 240;
-    --ring: 34 197 94; /* Emerald Green #22c55e */
+    --ring: 64 145 108; /* Forest Green #40916c */
     --radius: 0.5rem;
-    --chart-1: 34 197 94; /* Emerald Green #22c55e */
-    --chart-2: 245 158 11; /* Golden Yellow #f59e0b */
+    --chart-1: 64 145 108; /* Forest Green #40916c */
+    --chart-2: 212 165 116; /* Warm Beige #d4a574 */
     --chart-3: 30 41 59; /* Slate #1e293b */
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
@@ -38,21 +38,21 @@
     --card-foreground: 250 248 246; /* Warm Ivory #faf8f6 */
     --popover: 30 41 59; /* Slate #1e293b */
     --popover-foreground: 250 248 246; /* Warm Ivory #faf8f6 */
-    --primary: 34 197 94; /* Emerald Green #22c55e */
+    --primary: 64 145 108; /* Forest Green #40916c */
     --primary-foreground: 250 248 246; /* Warm Ivory #faf8f6 */
-    --secondary: 245 158 11; /* Golden Yellow #f59e0b */
+    --secondary: 212 165 116; /* Warm Beige #d4a574 */
     --secondary-foreground: 30 41 59; /* Slate #1e293b */
     --muted: 100 116 139; /* Cool Grey #64748b */
     --muted-foreground: 250 248 246; /* Warm Ivory #faf8f6 */
-    --accent: 245 158 11; /* Golden Yellow #f59e0b */
+    --accent: 212 165 116; /* Warm Beige #d4a574 */
     --accent-foreground: 30 41 59; /* Slate #1e293b */
     --destructive: 239 68 68;
     --destructive-foreground: 250 248 246; /* Warm Ivory #faf8f6 */
     --border: 100 116 139; /* Cool Grey #64748b */
     --input: 100 116 139; /* Cool Grey #64748b */
-    --ring: 34 197 94; /* Emerald Green #22c55e */
-    --chart-1: 34 197 94; /* Emerald Green #22c55e */
-    --chart-2: 245 158 11; /* Golden Yellow #f59e0b */
+    --ring: 64 145 108; /* Forest Green #40916c */
+    --chart-1: 64 145 108; /* Forest Green #40916c */
+    --chart-2: 212 165 116; /* Warm Beige #d4a574 */
     --chart-3: 30 41 59; /* Slate #1e293b */
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;

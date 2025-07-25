@@ -34,25 +34,25 @@ export default function HomePage() {
     <div className="min-h-screen bg-warm-ivory overflow-hidden">
       {/* Floating Background Elements */}
       <div className="fixed inset-0 pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-emerald-green/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-96 h-96 bg-golden-yellow/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-emerald-green/15 rounded-full blur-3xl animate-pulse delay-2000"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-forest-green/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-96 h-96 bg-warm-beige/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-forest-green/8 rounded-full blur-3xl animate-pulse delay-2000"></div>
       </div>
 
       {/* Header */}
-      <header className="border-b border-emerald-green/20 bg-gradient-to-r from-emerald-green/5 to-golden-yellow/5 backdrop-blur-sm sticky top-0 z-50 transition-all duration-300">
+      <header className="border-b border-forest-green/20 bg-gradient-to-r from-forest-green/5 to-warm-beige/10 backdrop-blur-sm sticky top-0 z-50 transition-all duration-300">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div
             className={`flex items-center space-x-2 transition-all duration-700 ${isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"}`}
           >
-            <div className="w-8 h-8 bg-gradient-to-br from-emerald-green to-golden-yellow rounded-lg flex items-center justify-center hover:scale-110 transition-transform duration-300 hover:rotate-12 shadow-lg">
+            <div className="w-8 h-8 bg-gradient-to-br from-forest-green to-warm-beige rounded-lg flex items-center justify-center hover:scale-110 transition-transform duration-300 hover:rotate-12 shadow-lg">
               <Brain className="w-5 h-5 text-warm-ivory animate-pulse" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-slate-dark hover:text-emerald-green transition-colors duration-300">
+              <h1 className="text-xl font-bold text-slate-dark hover:text-forest-green transition-colors duration-300">
                 EDVANCE
               </h1>
-              <p className="text-xs text-emerald-green font-medium animate-pulse">PAKISTAN</p>
+              <p className="text-xs text-forest-green font-medium animate-pulse">PAKISTAN</p>
             </div>
           </div>
           <nav
@@ -60,43 +60,43 @@ export default function HomePage() {
           >
             <Link
               href="#about"
-              className="text-slate-dark hover:text-emerald-green transition-all duration-300 hover:scale-105 relative group font-medium"
+              className="text-slate-dark hover:text-forest-green transition-all duration-300 hover:scale-105 relative group font-medium"
             >
               About
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-green transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-forest-green transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link
               href="#solution"
-              className="text-slate-dark hover:text-emerald-green transition-all duration-300 hover:scale-105 relative group font-medium"
+              className="text-slate-dark hover:text-forest-green transition-all duration-300 hover:scale-105 relative group font-medium"
             >
               Solution
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-green transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-forest-green transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link
               href="/demo"
-              className="text-slate-dark hover:text-emerald-green transition-all duration-300 hover:scale-105 relative group font-medium"
+              className="text-slate-dark hover:text-forest-green transition-all duration-300 hover:scale-105 relative group font-medium"
             >
               Demo
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-green transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-forest-green transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link
               href="#pilot"
-              className="text-slate-dark hover:text-emerald-green transition-all duration-300 hover:scale-105 relative group font-medium"
+              className="text-slate-dark hover:text-forest-green transition-all duration-300 hover:scale-105 relative group font-medium"
             >
               Pilot
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-green transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-forest-green transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link
               href="#contact"
-              className="text-slate-dark hover:text-emerald-green transition-all duration-300 hover:scale-105 relative group font-medium"
+              className="text-slate-dark hover:text-forest-green transition-all duration-300 hover:scale-105 relative group font-medium"
             >
               Contact
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-green transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-forest-green transition-all duration-300 group-hover:w-full"></span>
             </Link>
           </nav>
           <Button
             asChild
-            className={`bg-emerald-green hover:bg-emerald-green/90 text-warm-ivory hover:scale-105 transition-all duration-300 hover:shadow-lg shadow-emerald-green/20 ${isVisible ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"} delay-500`}
+            className={`bg-forest-green hover:bg-forest-green/90 text-warm-ivory hover:scale-105 transition-all duration-300 hover:shadow-lg shadow-forest-green/20 ${isVisible ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"} delay-500`}
           >
             <Link href="#contact">Get Involved</Link>
           </Button>
@@ -107,16 +107,16 @@ export default function HomePage() {
       <AnimatedSection className="py-20 px-4 relative" animation="fade-up">
         <div className="container mx-auto text-center max-w-4xl relative z-10">
           <Badge
-            className={`mb-6 bg-gradient-to-r from-emerald-green/10 to-golden-yellow/10 text-slate-dark border-emerald-green/20 hover:bg-gradient-to-r hover:from-emerald-green/20 hover:to-golden-yellow/20 hover:scale-105 transition-all duration-500 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+            className={`mb-6 bg-gradient-to-r from-forest-green/10 to-warm-beige/15 text-slate-dark border-forest-green/20 hover:bg-gradient-to-r hover:from-forest-green/20 hover:to-warm-beige/25 hover:scale-105 transition-all duration-500 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
           >
-            <Sparkles className="w-3 h-3 mr-1 animate-spin text-emerald-green" />
+            <Sparkles className="w-3 h-3 mr-1 animate-spin text-forest-green" />
             Transforming Education in Pakistan
           </Badge>
           <h1
             className={`text-4xl md:text-6xl font-bold text-slate-dark mb-6 leading-tight transition-all duration-700 delay-200 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
           >
             Empowering{" "}
-            <span className="bg-gradient-to-r from-emerald-green via-golden-yellow to-emerald-green bg-clip-text text-transparent animate-gradient bg-300% bg-size-200">
+            <span className="bg-gradient-to-r from-forest-green via-warm-beige to-forest-green bg-clip-text text-transparent animate-gradient bg-300% bg-size-200">
               Personalized Learning
             </span>{" "}
             in Pakistan
@@ -132,7 +132,7 @@ export default function HomePage() {
           >
             <Button
               size="lg"
-              className="bg-emerald-green hover:bg-emerald-green/90 text-warm-ivory hover:scale-105 hover:shadow-xl transition-all duration-300 group shadow-emerald-green/20"
+              className="bg-forest-green hover:bg-forest-green/90 text-warm-ivory hover:scale-105 hover:shadow-xl transition-all duration-300 group shadow-forest-green/20"
               asChild
             >
               <Link href="/demo">
@@ -142,7 +142,7 @@ export default function HomePage() {
             </Button>
             <Button
               size="lg"
-              className="bg-golden-yellow hover:bg-golden-yellow/90 text-slate-dark hover:scale-105 hover:shadow-xl transition-all duration-300 group shadow-golden-yellow/20"
+              className="bg-warm-beige hover:bg-warm-beige/90 text-slate-dark hover:scale-105 hover:shadow-xl transition-all duration-300 group shadow-warm-beige/20"
               asChild
             >
               <Link href="#solution">
@@ -153,7 +153,7 @@ export default function HomePage() {
             <Button
               size="lg"
               variant="outline"
-              className="border-emerald-green text-emerald-green hover:bg-emerald-green hover:text-warm-ivory hover:scale-105 hover:shadow-lg transition-all duration-300 bg-transparent"
+              className="border-forest-green text-forest-green hover:bg-forest-green hover:text-warm-ivory hover:scale-105 hover:shadow-lg transition-all duration-300 bg-transparent"
               asChild
             >
               <Link href="#contact">Partner With Us</Link>
@@ -164,10 +164,10 @@ export default function HomePage() {
 
       {/* Mission Statement */}
       <AnimatedSection
-        className="py-16 bg-gradient-to-r from-emerald-green via-golden-yellow to-emerald-green text-warm-ivory relative overflow-hidden"
+        className="py-16 bg-gradient-to-r from-forest-green via-warm-beige to-forest-green text-warm-ivory relative overflow-hidden"
         animation="scale-up"
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-green/90 to-golden-yellow/90 animate-gradient bg-300%"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-forest-green/90 to-warm-beige/80 animate-gradient bg-300%"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 flex items-center justify-center gap-3">
             <Star className="w-8 h-8 animate-pulse" />
@@ -194,12 +194,12 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <AnimatedSection animation="fade-left" delay={100}>
-              <Card className="border-2 border-emerald-green/20 hover:border-emerald-green/40 hover:shadow-xl transition-all duration-500 hover:scale-105 group h-full bg-warm-ivory shadow-lg">
+              <Card className="border-2 border-forest-green/20 hover:border-forest-green/40 hover:shadow-xl transition-all duration-500 hover:scale-105 group h-full bg-warm-ivory shadow-lg">
                 <CardHeader>
-                  <div className="w-12 h-12 bg-gradient-to-br from-emerald-green/10 to-golden-yellow/10 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
-                    <Target className="w-6 h-6 text-emerald-green animate-pulse" />
+                  <div className="w-12 h-12 bg-gradient-to-br from-forest-green/10 to-warm-beige/15 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                    <Target className="w-6 h-6 text-forest-green animate-pulse" />
                   </div>
-                  <CardTitle className="group-hover:text-emerald-green transition-colors duration-300 text-slate-dark">
+                  <CardTitle className="group-hover:text-forest-green transition-colors duration-300 text-slate-dark">
                     Student-Centered
                   </CardTitle>
                 </CardHeader>
@@ -213,12 +213,12 @@ export default function HomePage() {
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={200}>
-              <Card className="border-2 border-golden-yellow/20 hover:border-golden-yellow/40 hover:shadow-xl transition-all duration-500 hover:scale-105 group h-full bg-warm-ivory shadow-lg">
+              <Card className="border-2 border-warm-beige/30 hover:border-warm-beige/50 hover:shadow-xl transition-all duration-500 hover:scale-105 group h-full bg-warm-ivory shadow-lg">
                 <CardHeader>
-                  <div className="w-12 h-12 bg-gradient-to-br from-golden-yellow/10 to-emerald-green/10 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
-                    <Users className="w-6 h-6 text-golden-yellow animate-pulse" />
+                  <div className="w-12 h-12 bg-gradient-to-br from-warm-beige/15 to-forest-green/10 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                    <Users className="w-6 h-6 text-warm-beige animate-pulse" />
                   </div>
-                  <CardTitle className="group-hover:text-golden-yellow transition-colors duration-300 text-slate-dark">
+                  <CardTitle className="group-hover:text-warm-beige transition-colors duration-300 text-slate-dark">
                     Teacher Empowerment
                   </CardTitle>
                 </CardHeader>
@@ -232,12 +232,12 @@ export default function HomePage() {
             </AnimatedSection>
 
             <AnimatedSection animation="fade-right" delay={300}>
-              <Card className="border-2 border-emerald-green/20 hover:border-emerald-green/40 hover:shadow-xl transition-all duration-500 hover:scale-105 group h-full bg-warm-ivory shadow-lg">
+              <Card className="border-2 border-forest-green/20 hover:border-forest-green/40 hover:shadow-xl transition-all duration-500 hover:scale-105 group h-full bg-warm-ivory shadow-lg">
                 <CardHeader>
-                  <div className="w-12 h-12 bg-gradient-to-br from-emerald-green/10 to-golden-yellow/10 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
-                    <Brain className="w-6 h-6 text-emerald-green animate-pulse" />
+                  <div className="w-12 h-12 bg-gradient-to-br from-forest-green/10 to-warm-beige/15 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                    <Brain className="w-6 h-6 text-forest-green animate-pulse" />
                   </div>
-                  <CardTitle className="group-hover:text-emerald-green transition-colors duration-300 text-slate-dark">
+                  <CardTitle className="group-hover:text-forest-green transition-colors duration-300 text-slate-dark">
                     AI-Powered
                   </CardTitle>
                 </CardHeader>
@@ -256,7 +256,7 @@ export default function HomePage() {
       {/* Solution Section */}
       <AnimatedSection
         id="solution"
-        className="py-20 px-4 bg-gradient-to-br from-emerald-green/5 to-golden-yellow/5 relative"
+        className="py-20 px-4 bg-gradient-to-br from-forest-green/5 to-warm-beige/10 relative"
         animation="slide-up"
       >
         <div className="container mx-auto max-w-6xl">
@@ -269,11 +269,11 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <AnimatedSection animation="fade-up" delay={100}>
-              <Card className="text-center p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-warm-ivory border-emerald-green/20 shadow-lg">
-                <div className="w-16 h-16 bg-gradient-to-br from-emerald-green/10 to-golden-yellow/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-emerald-green/20 group-hover:to-golden-yellow/20 transition-all duration-300">
-                  <Target className="w-8 h-8 text-emerald-green group-hover:rotate-12 transition-transform duration-300 animate-pulse" />
+              <Card className="text-center p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-warm-ivory border-forest-green/20 shadow-lg">
+                <div className="w-16 h-16 bg-gradient-to-br from-forest-green/10 to-warm-beige/15 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-forest-green/20 group-hover:to-warm-beige/25 transition-all duration-300">
+                  <Target className="w-8 h-8 text-forest-green group-hover:rotate-12 transition-transform duration-300 animate-pulse" />
                 </div>
-                <h3 className="font-semibold text-lg mb-2 group-hover:text-emerald-green transition-colors duration-300 text-slate-dark">
+                <h3 className="font-semibold text-lg mb-2 group-hover:text-forest-green transition-colors duration-300 text-slate-dark">
                   Mastery-Based Learning
                 </h3>
                 <p className="text-cool-grey text-sm">
@@ -283,11 +283,11 @@ export default function HomePage() {
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={200}>
-              <Card className="text-center p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-warm-ivory border-golden-yellow/20 shadow-lg">
-                <div className="w-16 h-16 bg-gradient-to-br from-golden-yellow/10 to-emerald-green/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-golden-yellow/20 group-hover:to-emerald-green/20 transition-all duration-300">
-                  <Brain className="w-8 h-8 text-golden-yellow group-hover:rotate-12 transition-transform duration-300 animate-pulse" />
+              <Card className="text-center p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-warm-ivory border-warm-beige/30 shadow-lg">
+                <div className="w-16 h-16 bg-gradient-to-br from-warm-beige/15 to-forest-green/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-warm-beige/25 group-hover:to-forest-green/20 transition-all duration-300">
+                  <Brain className="w-8 h-8 text-warm-beige group-hover:rotate-12 transition-transform duration-300 animate-pulse" />
                 </div>
-                <h3 className="font-semibold text-lg mb-2 group-hover:text-golden-yellow transition-colors duration-300 text-slate-dark">
+                <h3 className="font-semibold text-lg mb-2 group-hover:text-warm-beige transition-colors duration-300 text-slate-dark">
                   AI Tools
                 </h3>
                 <p className="text-cool-grey text-sm">
@@ -297,11 +297,11 @@ export default function HomePage() {
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={300}>
-              <Card className="text-center p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-warm-ivory border-emerald-green/20 shadow-lg">
-                <div className="w-16 h-16 bg-gradient-to-br from-emerald-green/10 to-golden-yellow/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-emerald-green/20 group-hover:to-golden-yellow/20 transition-all duration-300">
-                  <Users className="w-8 h-8 text-emerald-green group-hover:rotate-12 transition-transform duration-300 animate-pulse" />
+              <Card className="text-center p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-warm-ivory border-forest-green/20 shadow-lg">
+                <div className="w-16 h-16 bg-gradient-to-br from-forest-green/10 to-warm-beige/15 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-forest-green/20 group-hover:to-warm-beige/25 transition-all duration-300">
+                  <Users className="w-8 h-8 text-forest-green group-hover:rotate-12 transition-transform duration-300 animate-pulse" />
                 </div>
-                <h3 className="font-semibold text-lg mb-2 group-hover:text-emerald-green transition-colors duration-300 text-slate-dark">
+                <h3 className="font-semibold text-lg mb-2 group-hover:text-forest-green transition-colors duration-300 text-slate-dark">
                   Teacher Training
                 </h3>
                 <p className="text-cool-grey text-sm">
@@ -311,11 +311,11 @@ export default function HomePage() {
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={400}>
-              <Card className="text-center p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-warm-ivory border-golden-yellow/20 shadow-lg">
-                <div className="w-16 h-16 bg-gradient-to-br from-golden-yellow/10 to-emerald-green/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-golden-yellow/20 group-hover:to-emerald-green/20 transition-all duration-300">
-                  <BookOpen className="w-8 h-8 text-golden-yellow group-hover:rotate-12 transition-transform duration-300 animate-pulse" />
+              <Card className="text-center p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-warm-ivory border-warm-beige/30 shadow-lg">
+                <div className="w-16 h-16 bg-gradient-to-br from-warm-beige/15 to-forest-green/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-warm-beige/25 group-hover:to-forest-green/20 transition-all duration-300">
+                  <BookOpen className="w-8 h-8 text-warm-beige group-hover:rotate-12 transition-transform duration-300 animate-pulse" />
                 </div>
-                <h3 className="font-semibold text-lg mb-2 group-hover:text-golden-yellow transition-colors duration-300 text-slate-dark">
+                <h3 className="font-semibold text-lg mb-2 group-hover:text-warm-beige transition-colors duration-300 text-slate-dark">
                   Existing Infrastructure
                 </h3>
                 <p className="text-cool-grey text-sm">Leverages existing Chromebooks, LMS, and lab infrastructure</p>
@@ -337,11 +337,11 @@ export default function HomePage() {
             <AnimatedSection animation="fade-right" delay={200}>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4 group">
-                  <div className="w-8 h-8 bg-emerald-green rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 group-hover:bg-emerald-green/90 transition-all duration-300 shadow-lg">
+                  <div className="w-8 h-8 bg-forest-green rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 group-hover:bg-forest-green/90 transition-all duration-300 shadow-lg">
                     <CheckCircle className="w-5 h-5 text-warm-ivory" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg mb-2 group-hover:text-emerald-green transition-colors duration-300 text-slate-dark">
+                    <h3 className="font-semibold text-lg mb-2 group-hover:text-forest-green transition-colors duration-300 text-slate-dark">
                       AI-Based Diagnostics
                     </h3>
                     <p className="text-cool-grey">
@@ -351,11 +351,11 @@ export default function HomePage() {
                 </div>
 
                 <div className="flex items-start space-x-4 group">
-                  <div className="w-8 h-8 bg-emerald-green rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 group-hover:bg-emerald-green/90 transition-all duration-300 shadow-lg">
+                  <div className="w-8 h-8 bg-forest-green rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 group-hover:bg-forest-green/90 transition-all duration-300 shadow-lg">
                     <CheckCircle className="w-5 h-5 text-warm-ivory" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg mb-2 group-hover:text-emerald-green transition-colors duration-300 text-slate-dark">
+                    <h3 className="font-semibold text-lg mb-2 group-hover:text-forest-green transition-colors duration-300 text-slate-dark">
                       Peer Tutoring & Teacher Support
                     </h3>
                     <p className="text-cool-grey">
@@ -365,11 +365,11 @@ export default function HomePage() {
                 </div>
 
                 <div className="flex items-start space-x-4 group">
-                  <div className="w-8 h-8 bg-emerald-green rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 group-hover:bg-emerald-green/90 transition-all duration-300 shadow-lg">
+                  <div className="w-8 h-8 bg-forest-green rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 group-hover:bg-forest-green/90 transition-all duration-300 shadow-lg">
                     <CheckCircle className="w-5 h-5 text-warm-ivory" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg mb-2 group-hover:text-emerald-green transition-colors duration-300 text-slate-dark">
+                    <h3 className="font-semibold text-lg mb-2 group-hover:text-forest-green transition-colors duration-300 text-slate-dark">
                       Weekly KhanMigo Sessions
                     </h3>
                     <p className="text-cool-grey">
@@ -379,11 +379,11 @@ export default function HomePage() {
                 </div>
 
                 <div className="flex items-start space-x-4 group">
-                  <div className="w-8 h-8 bg-emerald-green rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 group-hover:bg-emerald-green/90 transition-all duration-300 shadow-lg">
+                  <div className="w-8 h-8 bg-forest-green rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 group-hover:bg-forest-green/90 transition-all duration-300 shadow-lg">
                     <CheckCircle className="w-5 h-5 text-warm-ivory" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg mb-2 group-hover:text-emerald-green transition-colors duration-300 text-slate-dark">
+                    <h3 className="font-semibold text-lg mb-2 group-hover:text-forest-green transition-colors duration-300 text-slate-dark">
                       Monthly Assessments
                     </h3>
                     <p className="text-cool-grey">
@@ -395,24 +395,24 @@ export default function HomePage() {
             </AnimatedSection>
 
             <AnimatedSection animation="fade-left" delay={400}>
-              <Card className="p-8 bg-gradient-to-br from-emerald-green/5 to-golden-yellow/5 border-2 border-emerald-green/20 hover:shadow-xl transition-all duration-500 hover:scale-105 shadow-lg">
+              <Card className="p-8 bg-gradient-to-br from-forest-green/5 to-warm-beige/10 border-2 border-forest-green/20 hover:shadow-xl transition-all duration-500 hover:scale-105 shadow-lg">
                 <CardHeader className="pb-4">
                   <CardTitle className="text-xl flex items-center text-slate-dark">
-                    <Sparkles className="w-5 h-5 mr-2 text-golden-yellow animate-spin" />
+                    <Sparkles className="w-5 h-5 mr-2 text-warm-beige animate-spin" />
                     Teacher Enablement
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="flex items-center space-x-3 group hover:translate-x-2 transition-transform duration-300">
-                    <Lightbulb className="w-5 h-5 text-golden-yellow group-hover:animate-bounce" />
+                    <Lightbulb className="w-5 h-5 text-warm-beige group-hover:animate-bounce" />
                     <span className="text-cool-grey">Online training & ongoing mentorship</span>
                   </div>
                   <div className="flex items-center space-x-3 group hover:translate-x-2 transition-transform duration-300">
-                    <TrendingUp className="w-5 h-5 text-emerald-green group-hover:animate-bounce" />
+                    <TrendingUp className="w-5 h-5 text-forest-green group-hover:animate-bounce" />
                     <span className="text-cool-grey">Teachers selected based on tech-readiness & motivation</span>
                   </div>
                   <div className="flex items-center space-x-3 group hover:translate-x-2 transition-transform duration-300">
-                    <Heart className="w-5 h-5 text-golden-yellow group-hover:animate-bounce" />
+                    <Heart className="w-5 h-5 text-warm-beige group-hover:animate-bounce" />
                     <span className="text-cool-grey">Senior students trained as assistants to support class flow</span>
                   </div>
                 </CardContent>
@@ -425,10 +425,10 @@ export default function HomePage() {
       {/* Pilot Project */}
       <AnimatedSection
         id="pilot"
-        className="py-20 px-4 bg-gradient-to-r from-emerald-green via-golden-yellow to-emerald-green text-warm-ivory relative overflow-hidden"
+        className="py-20 px-4 bg-gradient-to-r from-forest-green via-warm-beige to-forest-green text-warm-ivory relative overflow-hidden"
         animation="scale-up"
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-green/90 to-golden-yellow/90 animate-gradient bg-300%"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-forest-green/90 to-warm-beige/80 animate-gradient bg-300%"></div>
         <div className="container mx-auto max-w-4xl text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">Pilot Project</h2>
           <p className="text-xl mb-12 opacity-90">
@@ -490,7 +490,7 @@ export default function HomePage() {
       {/* Contact Section */}
       <AnimatedSection
         id="contact"
-        className="py-20 px-4 bg-gradient-to-br from-emerald-green/5 to-golden-yellow/5"
+        className="py-20 px-4 bg-gradient-to-br from-forest-green/5 to-warm-beige/10"
         animation="fade-up"
       >
         <div className="container mx-auto max-w-4xl text-center">
@@ -501,11 +501,11 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             <AnimatedSection animation="fade-left" delay={100}>
-              <Card className="p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-warm-ivory border-emerald-green/20 shadow-lg">
-                <div className="w-12 h-12 bg-gradient-to-br from-emerald-green/10 to-golden-yellow/10 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-emerald-green/20 group-hover:to-golden-yellow/20 transition-all duration-300">
-                  <Mail className="w-6 h-6 text-emerald-green group-hover:animate-bounce" />
+              <Card className="p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-warm-ivory border-forest-green/20 shadow-lg">
+                <div className="w-12 h-12 bg-gradient-to-br from-forest-green/10 to-warm-beige/15 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-forest-green/20 group-hover:to-warm-beige/25 transition-all duration-300">
+                  <Mail className="w-6 h-6 text-forest-green group-hover:animate-bounce" />
                 </div>
-                <h3 className="font-semibold mb-2 group-hover:text-emerald-green transition-colors duration-300 text-slate-dark">
+                <h3 className="font-semibold mb-2 group-hover:text-forest-green transition-colors duration-300 text-slate-dark">
                   Email
                 </h3>
                 <p className="text-cool-grey">hello@pitchform.co</p>
@@ -513,11 +513,11 @@ export default function HomePage() {
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={200}>
-              <Card className="p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-warm-ivory border-golden-yellow/20 shadow-lg">
-                <div className="w-12 h-12 bg-gradient-to-br from-golden-yellow/10 to-emerald-green/10 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-golden-yellow/20 group-hover:to-emerald-green/20 transition-all duration-300">
-                  <Phone className="w-6 h-6 text-golden-yellow group-hover:animate-bounce" />
+              <Card className="p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-warm-ivory border-warm-beige/30 shadow-lg">
+                <div className="w-12 h-12 bg-gradient-to-br from-warm-beige/15 to-forest-green/10 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-warm-beige/25 group-hover:to-forest-green/20 transition-all duration-300">
+                  <Phone className="w-6 h-6 text-warm-beige group-hover:animate-bounce" />
                 </div>
-                <h3 className="font-semibold mb-2 group-hover:text-golden-yellow transition-colors duration-300 text-slate-dark">
+                <h3 className="font-semibold mb-2 group-hover:text-warm-beige transition-colors duration-300 text-slate-dark">
                   Phone
                 </h3>
                 <p className="text-cool-grey">983 457 7788</p>
@@ -525,11 +525,11 @@ export default function HomePage() {
             </AnimatedSection>
 
             <AnimatedSection animation="fade-right" delay={300}>
-              <Card className="p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-warm-ivory border-emerald-green/20 shadow-lg">
-                <div className="w-12 h-12 bg-gradient-to-br from-emerald-green/10 to-golden-yellow/10 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-emerald-green/20 group-hover:to-golden-yellow/20 transition-all duration-300">
-                  <Globe className="w-6 h-6 text-emerald-green group-hover:animate-bounce" />
+              <Card className="p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full bg-warm-ivory border-forest-green/20 shadow-lg">
+                <div className="w-12 h-12 bg-gradient-to-br from-forest-green/10 to-warm-beige/15 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-forest-green/20 group-hover:to-warm-beige/25 transition-all duration-300">
+                  <Globe className="w-6 h-6 text-forest-green group-hover:animate-bounce" />
                 </div>
-                <h3 className="font-semibold mb-2 group-hover:text-emerald-green transition-colors duration-300 text-slate-dark">
+                <h3 className="font-semibold mb-2 group-hover:text-forest-green transition-colors duration-300 text-slate-dark">
                   Website
                 </h3>
                 <p className="text-cool-grey">pitchform.co</p>
@@ -541,14 +541,14 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
-                className="bg-emerald-green hover:bg-emerald-green/90 text-warm-ivory hover:scale-105 hover:shadow-xl transition-all duration-300 group shadow-emerald-green/20"
+                className="bg-forest-green hover:bg-forest-green/90 text-warm-ivory hover:scale-105 hover:shadow-xl transition-all duration-300 group shadow-forest-green/20"
               >
                 <Mail className="mr-2 w-4 h-4 group-hover:animate-bounce" />
                 Get In Touch
               </Button>
               <Button
                 size="lg"
-                className="bg-golden-yellow hover:bg-golden-yellow/90 text-slate-dark hover:scale-105 hover:shadow-xl transition-all duration-300 group shadow-golden-yellow/20"
+                className="bg-warm-beige hover:bg-warm-beige/90 text-slate-dark hover:scale-105 hover:shadow-xl transition-all duration-300 group shadow-warm-beige/20"
               >
                 <Heart className="mr-2 w-4 h-4 group-hover:animate-pulse text-red-500" />
                 Support Our Mission
@@ -560,18 +560,18 @@ export default function HomePage() {
 
       {/* Footer */}
       <AnimatedSection
-        className="bg-gradient-to-r from-slate-dark to-emerald-green text-warm-ivory py-12 px-4 relative overflow-hidden"
+        className="bg-gradient-to-r from-slate-dark to-forest-green text-warm-ivory py-12 px-4 relative overflow-hidden"
         animation="fade-up"
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-dark to-emerald-green animate-gradient bg-300%"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-dark to-forest-green animate-gradient bg-300%"></div>
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 mb-4 md:mb-0 group">
-              <div className="w-8 h-8 bg-gradient-to-br from-emerald-green to-golden-yellow rounded-lg flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 shadow-lg">
+              <div className="w-8 h-8 bg-gradient-to-br from-forest-green to-warm-beige rounded-lg flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 shadow-lg">
                 <Brain className="w-5 h-5 text-warm-ivory animate-pulse" />
               </div>
               <div>
-                <h3 className="text-lg font-bold group-hover:text-golden-yellow transition-colors duration-300">
+                <h3 className="text-lg font-bold group-hover:text-warm-beige transition-colors duration-300">
                   EDVANCE PAKISTAN
                 </h3>
                 <p className="text-sm text-warm-ivory/70">Empowering Personalized Learning</p>
