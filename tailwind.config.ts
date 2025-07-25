@@ -20,23 +20,24 @@ const config = {
     },
     extend: {
       colors: {
-        // Your custom palette
-        "sage-green": "#446461",
-        "deep-black": "#000000",
-        "warm-ivory": "#f2ede9",
-        "cool-grey": "#6f808a",
+        // Your vibrant custom palette
+        "emerald-green": "#22c55e",
+        "golden-yellow": "#f59e0b",
+        "warm-ivory": "#faf8f6",
+        "slate-dark": "#1e293b",
+        "cool-grey": "#64748b",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#446461", // Green
-          foreground: "#f2ede9", // Ivory
+          DEFAULT: "#22c55e", // Emerald Green
+          foreground: "#faf8f6", // Warm Ivory
         },
         secondary: {
-          DEFAULT: "#000000", // Black
-          foreground: "#f2ede9", // Ivory
+          DEFAULT: "#f59e0b", // Golden Yellow
+          foreground: "#1e293b", // Slate Dark
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -47,8 +48,8 @@ const config = {
           foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "#446461", // Green
-          foreground: "#f2ede9", // Ivory
+          DEFAULT: "#f59e0b", // Golden Yellow
+          foreground: "#1e293b", // Slate Dark
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
