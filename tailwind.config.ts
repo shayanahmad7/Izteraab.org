@@ -20,9 +20,10 @@ const config = {
     },
     extend: {
       colors: {
-        // Your refined custom palette
-        "forest-green": "#40916c",
-        "girly-pink": "#EC407A",
+        // Sophisticated purple, pink, blue palette
+        "deep-violet": "#7c3aed",
+        "rose-pink": "#e11d48",
+        "royal-blue": "#2563eb",
         "warm-ivory": "#faf8f6",
         "slate-dark": "#1e293b",
         "cool-grey": "#64748b",
@@ -32,11 +33,11 @@ const config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#40916c", // Forest Green
+          DEFAULT: "#7c3aed", // Deep Violet
           foreground: "#faf8f6", // Warm Ivory
         },
         secondary: {
-          DEFAULT: "#EC407A", // Copper Pink
+          DEFAULT: "#e11d48", // Rose Pink
           foreground: "#faf8f6", // Warm Ivory
         },
         destructive: {
@@ -48,7 +49,7 @@ const config = {
           foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "#EC407A", // Copper Pink
+          DEFAULT: "#2563eb", // Royal Blue
           foreground: "#faf8f6", // Warm Ivory
         },
         popover: {
