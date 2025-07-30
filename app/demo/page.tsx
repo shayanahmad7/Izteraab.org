@@ -46,9 +46,9 @@ export default function DemoPage() {
             </div>
             <div>
               <h1 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
-                EDVANCE
+                IZTIRAB
               </h1>
-              <p className="text-xs text-blue-600 font-medium animate-pulse">PAKISTAN</p>
+              <p className="text-xs text-blue-600 font-medium animate-pulse">Empowering Learning</p>
             </div>
           </Link>
           <nav className="hidden md:flex items-center space-x-6">
@@ -84,8 +84,8 @@ export default function DemoPage() {
             </span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-            See how we transform traditional classrooms into dynamic, personalized learning environments where every
-            student thrives at their own pace.
+            See how Iztirab transforms traditional classrooms into dynamic, personalized learning environments where
+            every student thrives at their own pace through AI-supported coaching.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -108,7 +108,7 @@ export default function DemoPage() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">The Transformation</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Compare traditional passive learning with our AI-powered personalized approach
+              Compare traditional passive learning with our AI-supported personalized approach
             </p>
           </div>
 
@@ -204,7 +204,7 @@ export default function DemoPage() {
               </Card>
             </AnimatedSection>
 
-            {/* EdVance Classroom */}
+            {/* Iztirab Classroom */}
             <AnimatedSection animation="fade-left" delay={400}>
               <Card className="h-full border-2 border-green-200 hover:shadow-xl transition-all duration-500">
                 <CardHeader className="bg-gradient-to-r from-green-50 to-blue-50 border-b border-green-200">
@@ -213,8 +213,8 @@ export default function DemoPage() {
                       <CheckCircle className="w-6 h-6 text-green-600" />
                     </div>
                     <div>
-                      <CardTitle className="text-green-800">EdVance Classroom</CardTitle>
-                      <p className="text-green-600 text-sm">Personalized learning environment</p>
+                      <CardTitle className="text-green-800">Iztirab Classroom</CardTitle>
+                      <p className="text-green-600 text-sm">AI-supported personalized learning</p>
                     </div>
                   </div>
                 </CardHeader>
@@ -305,7 +305,7 @@ export default function DemoPage() {
                         <div>
                           <p className="font-medium text-green-800">AI-Powered Insights</p>
                           <p className="text-green-600 text-sm">
-                            Real-time tracking of each student's progress and learning gaps
+                            Real-time tracking of each student's progress and learning gaps through KhanMigo
                           </p>
                         </div>
                       </div>
@@ -322,9 +322,10 @@ export default function DemoPage() {
       <AnimatedSection className="py-20 px-4" animation="slide-up">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">A Day in the EdVance Classroom</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">A Day in the Iztirab Classroom</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Experience how personalized learning transforms the educational journey for every student
+              Experience how AI-supported personalized learning transforms the educational journey for every student and
+              teacher
             </p>
           </div>
 
@@ -367,7 +368,7 @@ export default function DemoPage() {
                         <div>
                           <h4 className="font-semibold text-gray-900">Practice & Mastery</h4>
                           <p className="text-gray-600 text-sm">
-                            Complete exercises until you achieve mastery, with instant feedback
+                            Complete exercises until you achieve mastery, with instant AI feedback
                           </p>
                         </div>
                       </div>
@@ -376,7 +377,7 @@ export default function DemoPage() {
                         <div>
                           <h4 className="font-semibold text-gray-900">Peer Learning</h4>
                           <p className="text-gray-600 text-sm">
-                            Help classmates and get help when needed - learning together
+                            Help classmates and get help when needed - learning together through collaboration
                           </p>
                         </div>
                       </div>
@@ -387,7 +388,7 @@ export default function DemoPage() {
                     <div className="space-y-3">
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="w-4 h-4 text-green-600" />
-                        <span className="text-sm text-gray-700">Learn at your own pace</span>
+                        <span className="text-sm text-gray-700">Learn at your own pace with AI support</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="w-4 h-4 text-green-600" />
@@ -395,15 +396,17 @@ export default function DemoPage() {
                       </div>
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="w-4 h-4 text-green-600" />
-                        <span className="text-sm text-gray-700">Advanced students can race ahead</span>
+                        <span className="text-sm text-gray-700">Advanced students can accelerate their learning</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="w-4 h-4 text-green-600" />
-                        <span className="text-sm text-gray-700">24/7 AI tutor support</span>
+                        <span className="text-sm text-gray-700">24/7 AI tutor support through KhanMigo</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="w-4 h-4 text-green-600" />
-                        <span className="text-sm text-gray-700">Build confidence through mastery</span>
+                        <span className="text-sm text-gray-700">
+                          Build confidence through mastery-based progression
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -416,11 +419,13 @@ export default function DemoPage() {
               <Card className="p-8 border-2 border-green-200 hover:shadow-xl transition-all duration-500">
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                   <div className="bg-gradient-to-br from-green-50 to-blue-50 p-6 rounded-lg">
-                    <h4 className="font-semibold text-gray-900 mb-4">Teacher Dashboard</h4>
+                    <h4 className="font-semibold text-gray-900 mb-4">Teacher Support Dashboard</h4>
                     <div className="space-y-3">
                       <div className="flex items-center space-x-2">
                         <Monitor className="w-4 h-4 text-blue-600" />
-                        <span className="text-sm text-gray-700">Real-time student progress tracking</span>
+                        <span className="text-sm text-gray-700">
+                          Real-time student progress tracking via AI analytics
+                        </span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <BarChart3 className="w-4 h-4 text-purple-600" />
@@ -428,15 +433,15 @@ export default function DemoPage() {
                       </div>
                       <div className="flex items-center space-x-2">
                         <Lightbulb className="w-4 h-4 text-yellow-600" />
-                        <span className="text-sm text-gray-700">AI-suggested interventions</span>
+                        <span className="text-sm text-gray-700">AI-suggested interventions and coaching tips</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <TrendingUp className="w-4 h-4 text-green-600" />
-                        <span className="text-sm text-gray-700">Track mastery levels across topics</span>
+                        <span className="text-sm text-gray-700">Track mastery levels across mathematical concepts</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <MessageCircle className="w-4 h-4 text-indigo-600" />
-                        <span className="text-sm text-gray-700">Facilitate group discussions</span>
+                        <span className="text-sm text-gray-700">Virtual mentorship and peer teacher network</span>
                       </div>
                     </div>
                   </div>
@@ -456,25 +461,25 @@ export default function DemoPage() {
                         <div>
                           <h4 className="font-semibold text-gray-900">Complete Visibility</h4>
                           <p className="text-gray-600 text-sm">
-                            See exactly what each student is working on and where they're struggling
+                            See exactly what each student is working on and where they're struggling through AI insights
                           </p>
                         </div>
                       </div>
                       <div className="flex items-start space-x-3">
                         <Heart className="w-5 h-5 text-red-600 mt-1" />
                         <div>
-                          <h4 className="font-semibold text-gray-900">Personalized Support</h4>
+                          <h4 className="font-semibold text-gray-900">Personalized Coaching</h4>
                           <p className="text-gray-600 text-sm">
-                            Move around the classroom, providing individual coaching and encouragement
+                            Move around the classroom, providing individual coaching and encouragement to each student
                           </p>
                         </div>
                       </div>
                       <div className="flex items-start space-x-3">
                         <Zap className="w-5 h-5 text-yellow-600 mt-1" />
                         <div>
-                          <h4 className="font-semibold text-gray-900">Instant Interventions</h4>
+                          <h4 className="font-semibold text-gray-900">Instant AI Interventions</h4>
                           <p className="text-gray-600 text-sm">
-                            AI alerts you when students need help, enabling timely support
+                            AI alerts you when students need help, enabling timely and targeted support
                           </p>
                         </div>
                       </div>
@@ -482,7 +487,9 @@ export default function DemoPage() {
                         <Users className="w-5 h-5 text-purple-600 mt-1" />
                         <div>
                           <h4 className="font-semibold text-gray-900">Facilitate Collaboration</h4>
-                          <p className="text-gray-600 text-sm">Guide group work and peer tutoring sessions</p>
+                          <p className="text-gray-600 text-sm">
+                            Guide group work, peer tutoring, and collaborative problem-solving sessions
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -498,9 +505,10 @@ export default function DemoPage() {
       <AnimatedSection className="py-20 px-4 bg-gray-50" animation="scale-up">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Powered by Advanced Technology</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Powered by Advanced AI Technology</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our platform integrates cutting-edge AI tools with proven educational resources
+              Our platform integrates cutting-edge AI tools with proven educational resources and comprehensive teacher
+              training
             </p>
           </div>
 
@@ -539,10 +547,10 @@ export default function DemoPage() {
                   <Monitor className="w-8 h-8 text-purple-600 group-hover:rotate-12 transition-transform duration-300" />
                 </div>
                 <h3 className="font-semibold text-lg mb-2 group-hover:text-purple-600 transition-colors duration-300">
-                  Learning Management
+                  Teacher Training Platform
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  Integrated LMS for tracking progress, assignments, and collaborative work
+                  Comprehensive training resources and ongoing mentorship for pedagogical transformation
                 </p>
               </Card>
             </AnimatedSection>
@@ -570,7 +578,7 @@ export default function DemoPage() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Expected Impact</h2>
             <p className="text-xl text-gray-600">
-              Based on global research and pilot programs, here's what we expect to achieve
+              Based on global research and pilot programs, here's what we expect to achieve through Iztirab
             </p>
           </div>
 
@@ -579,7 +587,9 @@ export default function DemoPage() {
               <Card className="text-center p-8 hover:shadow-xl transition-all duration-500 hover:scale-105 border-2 border-blue-200">
                 <div className="text-4xl font-bold text-blue-600 mb-2">85%</div>
                 <h3 className="font-semibold text-lg mb-2">Improved Engagement</h3>
-                <p className="text-gray-600 text-sm">Students actively participating in their learning journey</p>
+                <p className="text-gray-600 text-sm">
+                  Students actively participating in their personalized learning journey
+                </p>
               </Card>
             </AnimatedSection>
 
@@ -587,7 +597,9 @@ export default function DemoPage() {
               <Card className="text-center p-8 hover:shadow-xl transition-all duration-500 hover:scale-105 border-2 border-green-200">
                 <div className="text-4xl font-bold text-green-600 mb-2">70%</div>
                 <h3 className="font-semibold text-lg mb-2">Faster Mastery</h3>
-                <p className="text-gray-600 text-sm">Reduction in time needed to achieve learning objectives</p>
+                <p className="text-gray-600 text-sm">
+                  Reduction in time needed to achieve learning objectives through AI support
+                </p>
               </Card>
             </AnimatedSection>
 
@@ -595,7 +607,9 @@ export default function DemoPage() {
               <Card className="text-center p-8 hover:shadow-xl transition-all duration-500 hover:scale-105 border-2 border-purple-200">
                 <div className="text-4xl font-bold text-purple-600 mb-2">95%</div>
                 <h3 className="font-semibold text-lg mb-2">Teacher Satisfaction</h3>
-                <p className="text-gray-600 text-sm">Teachers report higher job satisfaction as learning coaches</p>
+                <p className="text-gray-600 text-sm">
+                  Teachers report higher job satisfaction as empowered learning coaches
+                </p>
               </Card>
             </AnimatedSection>
           </div>
@@ -610,7 +624,8 @@ export default function DemoPage() {
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Education?</h2>
           <p className="text-xl mb-8 opacity-90">
-            Join us in revolutionizing how students learn and teachers teach in Pakistan
+            Join Iztirab in revolutionizing how students learn and teachers teach in Pakistan through AI-supported
+            personalized learning
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button

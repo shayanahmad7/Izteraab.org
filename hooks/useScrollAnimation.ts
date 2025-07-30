@@ -9,12 +9,11 @@ export function useScrollAnimation(threshold = 0.1, rootMargin = "0px") {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // Set visible when entering viewport, invisible when leaving
         setIsVisible(entry.isIntersecting)
       },
       {
         threshold,
-        rootMargin, // This adds some margin to trigger animations slightly before/after
+        rootMargin,
       },
     )
 
