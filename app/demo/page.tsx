@@ -1,70 +1,131 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Progress } from "@/components/ui/progress"
 import { AnimatedSection } from "@/components/animated-section"
 import {
   Brain,
   Users,
-  Target,
-  ArrowRight,
+  BookOpen,
+  ArrowLeft,
   CheckCircle,
-  X,
-  Clock,
   TrendingUp,
-  Heart,
-  Lightbulb,
-  MessageCircle,
-  Eye,
-  Zap,
-  Play,
-  UserCheck,
-  Monitor,
-  PenTool,
-  BarChart3,
+  Clock,
+  Target,
   Sparkles,
+  Play,
+  Pause,
+  RotateCcw,
+  User,
+  GraduationCap,
+  MessageSquare,
+  BarChart3,
 } from "lucide-react"
 import Link from "next/link"
+import { useEffect, useState } from "react"
 
 export default function DemoPage() {
+  const [isVisible, setIsVisible] = useState(false)
+  const [currentStudent, setCurrentStudent] = useState(0)
+  const [isPlaying, setIsPlaying] = useState(false)
+  const [progress, setProgress] = useState(0)
+
+  const students = [
+    { name: "Ahmed", level: "Grade 4 - Fractions", progress: 75, status: "On Track", color: "bg-emerald-500" },
+    {
+      name: "Fatima",
+      level: "Grade 4 - Multiplication",
+      progress: 45,
+      status: "Needs Support",
+      color: "bg-rose-400",
+    },
+    { name: "Hassan", level: "Grade 4 - Division", progress: 90, status: "Advanced", color: "bg-teal-500" },
+    { name: "Aisha", level: "Grade 4 - Decimals", progress: 60, status: "Progressing", color: "bg-emerald-600" },
+  ]
+
+  useEffect(() => {
+    setIsVisible(true)
+  }, [])
+
+  useEffect(() => {
+    let interval: NodeJS.Timeout
+    if (isPlaying) {
+      interval = setInterval(() => {
+        setProgress((prev) => {
+          if (prev >= 100) {
+            setCurrentStudent((current) => (current + 1) % students.length)
+            return 0
+          }
+          return prev + 2
+        })
+      }, 100)
+    }
+    return () => clearInterval(interval)
+  }, [isPlaying, students.length])
+
+  const handlePlayPause = () => {
+    setIsPlaying(!isPlaying)
+  }
+
+  const handleReset = () => {
+    setIsPlaying(false)
+    setProgress(0)
+    setCurrentStudent(0)
+  }
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-emerald-50 overflow-hidden">
       {/* Floating Background Elements */}
       <div className="fixed inset-0 pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-96 h-96 bg-purple-200/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-indigo-200/20 rounded-full blur-3xl animate-pulse delay-2000"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-emerald-200/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-96 h-96 bg-teal-200/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-emerald-300/20 rounded-full blur-3xl animate-pulse delay-2000"></div>
       </div>
 
       {/* Header */}
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50 transition-all duration-300">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center space-x-2 group">
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 group-hover:rotate-12">
+          <div
+            className={`flex items-center space-x-2 transition-all duration-700 ${isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"}`}
+          >
+            <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-emerald-700 rounded-lg flex items-center justify-center hover:scale-110 transition-transform duration-300 hover:rotate-12">
               <Brain className="w-5 h-5 text-white animate-pulse" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+              <h1 className="text-xl font-bold text-gray-900 hover:text-emerald-600 transition-colors duration-300">
                 IZTIRAB
               </h1>
-              <p className="text-xs text-blue-600 font-medium animate-pulse">Empowering Learning</p>
+              <p className="text-xs text-emerald-600 font-medium animate-pulse">Empowering Learning</p>
             </div>
-          </Link>
-          <nav className="hidden md:flex items-center space-x-6">
+          </div>
+          <nav
+            className={`hidden md:flex items-center space-x-6 transition-all duration-700 delay-300 ${isVisible ? "translate-y-0 opacity-100" : "-translate-y-5 opacity-0"}`}
+          >
             <Link
               href="/"
-              className="text-gray-600 hover:text-blue-600 transition-all duration-300 hover:scale-105 relative group"
+              className="text-gray-600 hover:text-emerald-600 transition-all duration-300 hover:scale-105 relative group"
             >
               Home
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-600 transition-all duration-300 group-hover:w-full"></span>
             </Link>
-            <Link href="/demo" className="text-blue-600 font-medium relative group">
+            <Link
+              href="/about"
+              className="text-gray-600 hover:text-emerald-600 transition-all duration-300 hover:scale-105 relative group"
+            >
+              About
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-600 transition-all duration-300 group-hover:w-full"></span>
+            </Link>
+            <Link href="/demo" className="text-emerald-600 transition-all duration-300 hover:scale-105 relative group">
               Demo
-              <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-600"></span>
+              <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-emerald-600"></span>
             </Link>
           </nav>
-          <Button asChild className="bg-blue-600 hover:bg-blue-700 hover:scale-105 transition-all duration-300">
+          <Button
+            asChild
+            className={`bg-emerald-600 hover:bg-emerald-700 hover:scale-105 transition-all duration-300 hover:shadow-lg ${isVisible ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"} delay-500`}
+          >
             <Link href="/#contact">Get Involved</Link>
           </Button>
         </div>
@@ -73,428 +134,293 @@ export default function DemoPage() {
       {/* Hero Section */}
       <AnimatedSection className="py-20 px-4 relative" animation="fade-up">
         <div className="container mx-auto text-center max-w-4xl relative z-10">
-          <Badge className="mb-6 bg-blue-100 text-blue-800 hover:bg-blue-100 hover:scale-105 transition-all duration-500">
+          <Badge
+            className={`mb-6 bg-emerald-100 text-emerald-800 hover:bg-emerald-100 hover:scale-105 transition-all duration-500 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+          >
             <Sparkles className="w-3 h-3 mr-1 animate-spin" />
-            Classroom Transformation Demo
+            Interactive Demo
           </Badge>
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            From <span className="text-red-600">Passive Learning</span> to{" "}
-            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent animate-gradient bg-300% bg-size-200">
-              Active Mastery
+          <h1
+            className={`text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight transition-all duration-700 delay-200 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+          >
+            Experience{" "}
+            <span className="bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-600 bg-clip-text text-transparent animate-gradient bg-300% bg-size-200">
+              AI-Powered Learning
             </span>
           </h1>
-          <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-            See how Iztirab transforms traditional classrooms into dynamic, personalized learning environments where
-            every student thrives at their own pace through AI-supported coaching.
+          <p
+            className={`text-xl text-gray-600 mb-8 leading-relaxed transition-all duration-700 delay-400 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+          >
+            See how Iztirab transforms traditional classrooms into personalized learning environments where every
+            student thrives at their own pace.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div
+            className={`flex justify-center transition-all duration-700 delay-600 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+          >
             <Button
               size="lg"
-              className="bg-blue-600 hover:bg-blue-700 hover:scale-105 hover:shadow-xl transition-all duration-300 group"
+              variant="outline"
+              className="hover:scale-105 hover:shadow-lg transition-all duration-300 hover:bg-emerald-50 bg-transparent group"
               asChild
             >
-              <Link href="#comparison">
-                See The Transformation
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+              <Link href="/">
+                <ArrowLeft className="mr-2 w-4 h-4 group-hover:-translate-x-1 transition-transform duration-300" />
+                Back to Home
               </Link>
             </Button>
           </div>
         </div>
       </AnimatedSection>
 
-      {/* Before vs After Comparison */}
-      <AnimatedSection id="comparison" className="py-20 px-4 bg-gray-50" animation="fade-up">
-        <div className="container mx-auto max-w-7xl">
+      {/* Interactive Demo */}
+      <AnimatedSection className="py-20 px-4 bg-gray-50" animation="scale-up">
+        <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">The Transformation</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Live Classroom Simulation</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Compare traditional passive learning with our AI-supported personalized approach
+              Watch how AI-powered personalized learning adapts to each student's needs in real-time
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Traditional Classroom */}
-            <AnimatedSection animation="fade-right" delay={200}>
-              <Card className="h-full border-2 border-red-200 hover:shadow-xl transition-all duration-500">
-                <CardHeader className="bg-gradient-to-r from-red-50 to-red-100 border-b border-red-200">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
-                      <X className="w-6 h-6 text-red-600" />
-                    </div>
-                    <div>
-                      <CardTitle className="text-red-800">Traditional Classroom</CardTitle>
-                      <p className="text-red-600 text-sm">One-size-fits-all approach</p>
-                    </div>
+          <div className="grid lg:grid-cols-3 gap-8">
+            {/* Student Dashboard */}
+            <div className="lg:col-span-2">
+              <Card className="p-6 hover:shadow-xl transition-all duration-500">
+                <CardHeader className="pb-4">
+                  <div className="flex items-center justify-between">
+                    <CardTitle className="flex items-center">
+                      <User className="w-5 h-5 mr-2 text-emerald-600" />
+                      Student: {students[currentStudent].name}
+                    </CardTitle>
+                    <Badge className={`${students[currentStudent].color} text-white`}>
+                      {students[currentStudent].status}
+                    </Badge>
                   </div>
+                  <CardDescription>{students[currentStudent].level}</CardDescription>
                 </CardHeader>
-                <CardContent className="p-6 space-y-6">
-                  {/* Classroom Layout Visualization */}
-                  <div className="bg-red-50 p-6 rounded-lg border border-red-200">
-                    <h4 className="font-semibold text-red-800 mb-4 flex items-center">
-                      <Users className="w-4 h-4 mr-2" />
-                      Classroom Setup
-                    </h4>
-                    <div className="space-y-3">
-                      {/* Teacher at front */}
-                      <div className="flex justify-center mb-4">
-                        <div className="w-16 h-8 bg-red-300 rounded flex items-center justify-center text-xs font-medium text-red-800">
-                          Teacher
-                        </div>
-                      </div>
-                      {/* Students in rows */}
-                      <div className="grid grid-cols-6 gap-2">
-                        {Array.from({ length: 24 }, (_, i) => (
-                          <div
-                            key={i}
-                            className="w-8 h-6 bg-red-200 rounded text-xs flex items-center justify-center text-red-700"
-                          >
-                            S
-                          </div>
-                        ))}
-                      </div>
+                <CardContent className="space-y-6">
+                  <div>
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-sm font-medium">Learning Progress</span>
+                      <span className="text-sm text-gray-500">{Math.round(progress)}%</span>
                     </div>
+                    <Progress value={progress} className="h-3" />
                   </div>
 
-                  {/* Problems */}
-                  <div className="space-y-4">
-                    <h4 className="font-semibold text-red-800 flex items-center">
-                      <X className="w-4 h-4 mr-2" />
-                      Key Problems
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <Card className="p-4 bg-emerald-50 border-emerald-200">
+                      <div className="flex items-center space-x-2">
+                        <Target className="w-4 h-4 text-emerald-600" />
+                        <span className="text-sm font-medium">Current Topic</span>
+                      </div>
+                      <p className="text-lg font-semibold text-emerald-800 mt-1">
+                        {students[currentStudent].level.split(" - ")[1]}
+                      </p>
+                    </Card>
+
+                    <Card className="p-4 bg-teal-50 border-teal-200">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="w-4 h-4 text-teal-600" />
+                        <span className="text-sm font-medium">Mastery Level</span>
+                      </div>
+                      <p className="text-lg font-semibold text-teal-800 mt-1">{students[currentStudent].progress}%</p>
+                    </Card>
+                  </div>
+
+                  <div className="bg-gray-50 p-4 rounded-lg">
+                    <h4 className="font-medium mb-2 flex items-center">
+                      <MessageSquare className="w-4 h-4 mr-2 text-rose-500" />
+                      AI Tutor Feedback
                     </h4>
-                    <div className="space-y-3">
-                      <div className="flex items-start space-x-3 p-3 bg-red-50 rounded-lg">
-                        <Clock className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
-                        <div>
-                          <p className="font-medium text-red-800">Fixed Pace Learning</p>
-                          <p className="text-red-600 text-sm">
-                            All students must follow the same speed, regardless of their understanding
-                          </p>
+                    <p className="text-sm text-gray-600">
+                      {progress < 30
+                        ? "Great start! Let's work through some practice problems together."
+                        : progress < 70
+                          ? "You're making good progress! Try this challenging problem to test your understanding."
+                          : "Excellent work! You've mastered this concept. Ready for the next level?"}
+                    </p>
+                  </div>
+
+                  <div className="flex justify-center space-x-4">
+                    <Button
+                      onClick={handlePlayPause}
+                      className="flex items-center space-x-2 bg-emerald-600 hover:bg-emerald-700"
+                    >
+                      {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
+                      <span>{isPlaying ? "Pause" : "Play"} Demo</span>
+                    </Button>
+                    <Button
+                      onClick={handleReset}
+                      variant="outline"
+                      className="flex items-center space-x-2 bg-transparent"
+                    >
+                      <RotateCcw className="w-4 h-4" />
+                      <span>Reset</span>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Teacher Dashboard */}
+            <div className="space-y-6">
+              <Card className="p-6 hover:shadow-xl transition-all duration-500">
+                <CardHeader className="pb-4">
+                  <CardTitle className="flex items-center">
+                    <GraduationCap className="w-5 h-5 mr-2 text-teal-600" />
+                    Teacher Dashboard
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="space-y-3">
+                    {students.map((student, index) => (
+                      <div
+                        key={student.name}
+                        className={`p-3 rounded-lg border transition-all duration-300 ${
+                          index === currentStudent
+                            ? "border-emerald-300 bg-emerald-50 shadow-md"
+                            : "border-gray-200 bg-white"
+                        }`}
+                      >
+                        <div className="flex justify-between items-center">
+                          <span className="font-medium text-sm">{student.name}</span>
+                          <div className={`w-3 h-3 rounded-full ${student.color}`}></div>
+                        </div>
+                        <div className="mt-2">
+                          <Progress value={student.progress} className="h-2" />
+                          <span className="text-xs text-gray-500 mt-1">{student.progress}% Complete</span>
                         </div>
                       </div>
-                      <div className="flex items-start space-x-3 p-3 bg-red-50 rounded-lg">
-                        <Users className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
-                        <div>
-                          <p className="font-medium text-red-800">Passive Listening</p>
-                          <p className="text-red-600 text-sm">
-                            Students sit quietly, absorbing information without active engagement
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex items-start space-x-3 p-3 bg-red-50 rounded-lg">
-                        <Eye className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
-                        <div>
-                          <p className="font-medium text-red-800">Limited Individual Attention</p>
-                          <p className="text-red-600 text-sm">
-                            Teacher cannot monitor or help each student's specific needs
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex items-start space-x-3 p-3 bg-red-50 rounded-lg">
-                        <BarChart3 className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
-                        <div>
-                          <p className="font-medium text-red-800">No Progress Tracking</p>
-                          <p className="text-red-600 text-sm">
-                            Difficult to identify learning gaps until it's too late
-                          </p>
-                        </div>
-                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="p-6 hover:shadow-xl transition-all duration-500">
+                <CardHeader className="pb-4">
+                  <CardTitle className="flex items-center">
+                    <BarChart3 className="w-5 h-5 mr-2 text-rose-500" />
+                    Class Analytics
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="text-center p-3 bg-emerald-50 rounded-lg">
+                      <div className="text-2xl font-bold text-emerald-600">67%</div>
+                      <div className="text-xs text-gray-600">Avg Progress</div>
+                    </div>
+                    <div className="text-center p-3 bg-teal-50 rounded-lg">
+                      <div className="text-2xl font-bold text-teal-600">4/4</div>
+                      <div className="text-xs text-gray-600">Active Students</div>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-sm">
+                      <span>Students on track</span>
+                      <span className="font-medium">75%</span>
+                    </div>
+                    <div className="flex justify-between text-sm">
+                      <span>Need support</span>
+                      <span className="font-medium">25%</span>
                     </div>
                   </div>
                 </CardContent>
               </Card>
-            </AnimatedSection>
-
-            {/* Iztirab Classroom */}
-            <AnimatedSection animation="fade-left" delay={400}>
-              <Card className="h-full border-2 border-green-200 hover:shadow-xl transition-all duration-500">
-                <CardHeader className="bg-gradient-to-r from-green-50 to-blue-50 border-b border-green-200">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 bg-gradient-to-r from-green-100 to-blue-100 rounded-lg flex items-center justify-center">
-                      <CheckCircle className="w-6 h-6 text-green-600" />
-                    </div>
-                    <div>
-                      <CardTitle className="text-green-800">Iztirab Classroom</CardTitle>
-                      <p className="text-green-600 text-sm">AI-supported personalized learning</p>
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent className="p-6 space-y-6">
-                  {/* Classroom Layout Visualization */}
-                  <div className="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-lg border border-green-200">
-                    <h4 className="font-semibold text-green-800 mb-4 flex items-center">
-                      <Users className="w-4 h-4 mr-2" />
-                      Collaborative Setup
-                    </h4>
-                    <div className="space-y-4">
-                      {/* Groups in circles */}
-                      <div className="grid grid-cols-2 gap-6">
-                        {Array.from({ length: 4 }, (_, groupIndex) => (
-                          <div key={groupIndex} className="relative">
-                            <div className="w-20 h-20 border-2 border-green-300 rounded-full flex items-center justify-center relative">
-                              <div className="text-xs font-medium text-green-800">Group {groupIndex + 1}</div>
-                              {/* Students around circle */}
-                              {Array.from({ length: 6 }, (_, studentIndex) => {
-                                const angle = studentIndex * 60 * (Math.PI / 180)
-                                const x = Math.cos(angle) * 35
-                                const y = Math.sin(angle) * 35
-                                return (
-                                  <div
-                                    key={studentIndex}
-                                    className="absolute w-4 h-4 bg-green-200 rounded-full text-xs flex items-center justify-center text-green-700"
-                                    style={{
-                                      left: `calc(50% + ${x}px - 8px)`,
-                                      top: `calc(50% + ${y}px - 8px)`,
-                                    }}
-                                  >
-                                    S
-                                  </div>
-                                )
-                              })}
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                      {/* Teacher moving around */}
-                      <div className="flex justify-center">
-                        <div className="flex items-center space-x-2 bg-blue-100 px-3 py-1 rounded-full">
-                          <div className="w-6 h-6 bg-blue-300 rounded-full flex items-center justify-center text-xs font-medium text-blue-800">
-                            T
-                          </div>
-                          <span className="text-xs text-blue-800">Coach moving between groups</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Solutions */}
-                  <div className="space-y-4">
-                    <h4 className="font-semibold text-green-800 flex items-center">
-                      <CheckCircle className="w-4 h-4 mr-2" />
-                      Key Advantages
-                    </h4>
-                    <div className="space-y-3">
-                      <div className="flex items-start space-x-3 p-3 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg">
-                        <TrendingUp className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                        <div>
-                          <p className="font-medium text-green-800">Self-Paced Learning</p>
-                          <p className="text-green-600 text-sm">
-                            Students progress at their own speed, mastering concepts before moving forward
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex items-start space-x-3 p-3 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg">
-                        <MessageCircle className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                        <div>
-                          <p className="font-medium text-green-800">Active Collaboration</p>
-                          <p className="text-green-600 text-sm">
-                            Students work in groups, teaching and learning from each other
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex items-start space-x-3 p-3 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg">
-                        <UserCheck className="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" />
-                        <div>
-                          <p className="font-medium text-green-800">Personal Coaching</p>
-                          <p className="text-green-600 text-sm">
-                            Teacher acts as coach, providing individual guidance where needed
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex items-start space-x-3 p-3 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg">
-                        <Brain className="w-5 h-5 text-indigo-600 mt-0.5 flex-shrink-0 animate-pulse" />
-                        <div>
-                          <p className="font-medium text-green-800">AI-Powered Insights</p>
-                          <p className="text-green-600 text-sm">
-                            Real-time tracking of each student's progress and learning gaps through KhanMigo
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </AnimatedSection>
+            </div>
           </div>
         </div>
       </AnimatedSection>
 
-      {/* Detailed Learning Experience */}
-      <AnimatedSection className="py-20 px-4" animation="slide-up">
+      {/* Comparison Section */}
+      <AnimatedSection className="py-20 px-4" animation="fade-up">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">A Day in the Iztirab Classroom</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Traditional vs. Iztirab Approach</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Experience how AI-supported personalized learning transforms the educational journey for every student and
-              teacher
+              See the dramatic difference in learning outcomes and student engagement
             </p>
           </div>
 
-          <div className="space-y-12">
-            {/* Student Experience */}
+          <div className="grid md:grid-cols-2 gap-8">
             <AnimatedSection animation="fade-right" delay={200}>
-              <Card className="p-8 border-2 border-blue-200 hover:shadow-xl transition-all duration-500">
-                <div className="grid md:grid-cols-2 gap-8 items-center">
-                  <div>
-                    <div className="flex items-center space-x-3 mb-6">
-                      <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                        <Target className="w-6 h-6 text-blue-600" />
-                      </div>
-                      <div>
-                        <h3 className="text-2xl font-bold text-gray-900">For Students</h3>
-                        <p className="text-blue-600">Personalized learning journey</p>
-                      </div>
+              <Card className="p-8 border-2 border-red-200 hover:shadow-xl transition-all duration-500">
+                <CardHeader className="pb-6">
+                  <CardTitle className="text-xl text-red-700 flex items-center">
+                    <Clock className="w-5 h-5 mr-2" />
+                    Traditional Classroom
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="space-y-3">
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-600">One-size-fits-all teaching approach</span>
                     </div>
-                    <div className="space-y-4">
-                      <div className="flex items-start space-x-3">
-                        <Brain className="w-5 h-5 text-purple-600 mt-1 animate-pulse" />
-                        <div>
-                          <h4 className="font-semibold text-gray-900">AI Diagnostic Assessment</h4>
-                          <p className="text-gray-600 text-sm">
-                            KhanMigo identifies your current level and creates a personalized learning path
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <Play className="w-5 h-5 text-green-600 mt-1" />
-                        <div>
-                          <h4 className="font-semibold text-gray-900">Interactive Video Lessons</h4>
-                          <p className="text-gray-600 text-sm">
-                            Watch Khan Academy videos in Urdu at your own pace, pause and replay as needed
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <PenTool className="w-5 h-5 text-orange-600 mt-1" />
-                        <div>
-                          <h4 className="font-semibold text-gray-900">Practice & Mastery</h4>
-                          <p className="text-gray-600 text-sm">
-                            Complete exercises until you achieve mastery, with instant AI feedback
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <Users className="w-5 h-5 text-blue-600 mt-1" />
-                        <div>
-                          <h4 className="font-semibold text-gray-900">Peer Learning</h4>
-                          <p className="text-gray-600 text-sm">
-                            Help classmates and get help when needed - learning together through collaboration
-                          </p>
-                        </div>
-                      </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-600">Students move at same pace regardless of understanding</span>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-600">Limited individual attention and feedback</span>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-600">Teacher as primary source of information</span>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-600">Passive learning environment</span>
                     </div>
                   </div>
-                  <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-lg">
-                    <h4 className="font-semibold text-gray-900 mb-4">Student Benefits</h4>
-                    <div className="space-y-3">
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="w-4 h-4 text-green-600" />
-                        <span className="text-sm text-gray-700">Learn at your own pace with AI support</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="w-4 h-4 text-green-600" />
-                        <span className="text-sm text-gray-700">Fill knowledge gaps before moving forward</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="w-4 h-4 text-green-600" />
-                        <span className="text-sm text-gray-700">Advanced students can accelerate their learning</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="w-4 h-4 text-green-600" />
-                        <span className="text-sm text-gray-700">24/7 AI tutor support through KhanMigo</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="w-4 h-4 text-green-600" />
-                        <span className="text-sm text-gray-700">
-                          Build confidence through mastery-based progression
-                        </span>
-                      </div>
+                  <div className="mt-6 p-4 bg-red-50 rounded-lg">
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-red-600">30%</div>
+                      <div className="text-sm text-gray-600">Average mastery rate</div>
                     </div>
                   </div>
-                </div>
+                </CardContent>
               </Card>
             </AnimatedSection>
 
-            {/* Teacher Experience */}
             <AnimatedSection animation="fade-left" delay={400}>
-              <Card className="p-8 border-2 border-green-200 hover:shadow-xl transition-all duration-500">
-                <div className="grid md:grid-cols-2 gap-8 items-center">
-                  <div className="bg-gradient-to-br from-green-50 to-blue-50 p-6 rounded-lg">
-                    <h4 className="font-semibold text-gray-900 mb-4">Teacher Support Dashboard</h4>
-                    <div className="space-y-3">
-                      <div className="flex items-center space-x-2">
-                        <Monitor className="w-4 h-4 text-blue-600" />
-                        <span className="text-sm text-gray-700">
-                          Real-time student progress tracking via AI analytics
-                        </span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <BarChart3 className="w-4 h-4 text-purple-600" />
-                        <span className="text-sm text-gray-700">Identify struggling students instantly</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <Lightbulb className="w-4 h-4 text-yellow-600" />
-                        <span className="text-sm text-gray-700">AI-suggested interventions and coaching tips</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <TrendingUp className="w-4 h-4 text-green-600" />
-                        <span className="text-sm text-gray-700">Track mastery levels across mathematical concepts</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <MessageCircle className="w-4 h-4 text-indigo-600" />
-                        <span className="text-sm text-gray-700">Virtual mentorship and peer teacher network</span>
-                      </div>
+              <Card className="p-8 border-2 border-emerald-200 hover:shadow-xl transition-all duration-500">
+                <CardHeader className="pb-6">
+                  <CardTitle className="text-xl text-emerald-700 flex items-center">
+                    <Brain className="w-5 h-5 mr-2 animate-pulse" />
+                    Iztirab Classroom
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="space-y-3">
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-600">Personalized learning paths for each student</span>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-600">Mastery-based progression ensures understanding</span>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-600">AI-powered real-time feedback and support</span>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-600">Teacher as learning coach and facilitator</span>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-600">Active, engaging learning environment</span>
                     </div>
                   </div>
-                  <div>
-                    <div className="flex items-center space-x-3 mb-6">
-                      <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                        <UserCheck className="w-6 h-6 text-green-600" />
-                      </div>
-                      <div>
-                        <h3 className="text-2xl font-bold text-gray-900">For Teachers</h3>
-                        <p className="text-green-600">From lecturer to learning coach</p>
-                      </div>
-                    </div>
-                    <div className="space-y-4">
-                      <div className="flex items-start space-x-3">
-                        <Eye className="w-5 h-5 text-blue-600 mt-1" />
-                        <div>
-                          <h4 className="font-semibold text-gray-900">Complete Visibility</h4>
-                          <p className="text-gray-600 text-sm">
-                            See exactly what each student is working on and where they're struggling through AI insights
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <Heart className="w-5 h-5 text-red-600 mt-1" />
-                        <div>
-                          <h4 className="font-semibold text-gray-900">Personalized Coaching</h4>
-                          <p className="text-gray-600 text-sm">
-                            Move around the classroom, providing individual coaching and encouragement to each student
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <Zap className="w-5 h-5 text-yellow-600 mt-1" />
-                        <div>
-                          <h4 className="font-semibold text-gray-900">Instant AI Interventions</h4>
-                          <p className="text-gray-600 text-sm">
-                            AI alerts you when students need help, enabling timely and targeted support
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <Users className="w-5 h-5 text-purple-600 mt-1" />
-                        <div>
-                          <h4 className="font-semibold text-gray-900">Facilitate Collaboration</h4>
-                          <p className="text-gray-600 text-sm">
-                            Guide group work, peer tutoring, and collaborative problem-solving sessions
-                          </p>
-                        </div>
-                      </div>
+                  <div className="mt-6 p-4 bg-emerald-50 rounded-lg">
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-emerald-600">85%</div>
+                      <div className="text-sm text-gray-600">Average mastery rate</div>
                     </div>
                   </div>
-                </div>
+                </CardContent>
               </Card>
             </AnimatedSection>
           </div>
@@ -502,114 +428,61 @@ export default function DemoPage() {
       </AnimatedSection>
 
       {/* Technology Stack */}
-      <AnimatedSection className="py-20 px-4 bg-gray-50" animation="scale-up">
+      <AnimatedSection className="py-20 px-4 bg-gray-50" animation="slide-up">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Powered by Advanced AI Technology</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Technology Platform</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our platform integrates cutting-edge AI tools with proven educational resources and comprehensive teacher
-              training
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <AnimatedSection animation="fade-up" delay={100}>
-              <Card className="text-center p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-blue-200 transition-all duration-300">
-                  <Brain className="w-8 h-8 text-blue-600 group-hover:rotate-12 transition-transform duration-300 animate-pulse" />
-                </div>
-                <h3 className="font-semibold text-lg mb-2 group-hover:text-blue-600 transition-colors duration-300">
-                  KhanMigo AI
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Personal AI tutor providing instant feedback, explanations, and guidance for every student
-                </p>
-              </Card>
-            </AnimatedSection>
-
-            <AnimatedSection animation="fade-up" delay={200}>
-              <Card className="text-center p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-green-200 transition-all duration-300">
-                  <Play className="w-8 h-8 text-green-600 group-hover:rotate-12 transition-transform duration-300" />
-                </div>
-                <h3 className="font-semibold text-lg mb-2 group-hover:text-green-600 transition-colors duration-300">
-                  Khan Academy
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Comprehensive video library with Urdu translations and interactive exercises
-                </p>
-              </Card>
-            </AnimatedSection>
-
-            <AnimatedSection animation="fade-up" delay={300}>
-              <Card className="text-center p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-purple-200 transition-all duration-300">
-                  <Monitor className="w-8 h-8 text-purple-600 group-hover:rotate-12 transition-transform duration-300" />
-                </div>
-                <h3 className="font-semibold text-lg mb-2 group-hover:text-purple-600 transition-colors duration-300">
-                  Teacher Training Platform
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Comprehensive training resources and ongoing mentorship for pedagogical transformation
-                </p>
-              </Card>
-            </AnimatedSection>
-
-            <AnimatedSection animation="fade-up" delay={400}>
-              <Card className="text-center p-6 hover:shadow-xl transition-all duration-500 hover:scale-105 group hover:-translate-y-2 h-full">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-orange-200 transition-all duration-300">
-                  <BarChart3 className="w-8 h-8 text-orange-600 group-hover:rotate-12 transition-transform duration-300" />
-                </div>
-                <h3 className="font-semibold text-lg mb-2 group-hover:text-orange-600 transition-colors duration-300">
-                  Analytics Dashboard
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Real-time insights into student progress, engagement, and learning outcomes
-                </p>
-              </Card>
-            </AnimatedSection>
-          </div>
-        </div>
-      </AnimatedSection>
-
-      {/* Success Metrics */}
-      <AnimatedSection className="py-20 px-4" animation="fade-up">
-        <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Expected Impact</h2>
-            <p className="text-xl text-gray-600">
-              Based on global research and pilot programs, here's what we expect to achieve through Iztirab
+              Built on proven educational tools and enhanced with AI-powered personalization
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <AnimatedSection animation="scale-up" delay={100}>
-              <Card className="text-center p-8 hover:shadow-xl transition-all duration-500 hover:scale-105 border-2 border-blue-200">
-                <div className="text-4xl font-bold text-blue-600 mb-2">85%</div>
-                <h3 className="font-semibold text-lg mb-2">Improved Engagement</h3>
-                <p className="text-gray-600 text-sm">
-                  Students actively participating in their personalized learning journey
+            <AnimatedSection animation="fade-up" delay={100}>
+              <Card className="text-center p-8 hover:shadow-xl transition-all duration-500 hover:scale-105 group h-full">
+                <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:bg-emerald-200 transition-all duration-300">
+                  <Brain className="w-8 h-8 text-emerald-600 animate-pulse" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4 group-hover:text-emerald-600 transition-colors duration-300">
+                  KhanMigo AI Tutor
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Personalized AI tutoring that adapts to each student's learning style and pace, providing instant
+                  feedback and guidance.
                 </p>
+                <Badge className="bg-emerald-100 text-emerald-800">AI-Powered</Badge>
               </Card>
             </AnimatedSection>
 
-            <AnimatedSection animation="scale-up" delay={200}>
-              <Card className="text-center p-8 hover:shadow-xl transition-all duration-500 hover:scale-105 border-2 border-green-200">
-                <div className="text-4xl font-bold text-green-600 mb-2">70%</div>
-                <h3 className="font-semibold text-lg mb-2">Faster Mastery</h3>
-                <p className="text-gray-600 text-sm">
-                  Reduction in time needed to achieve learning objectives through AI support
+            <AnimatedSection animation="fade-up" delay={200}>
+              <Card className="text-center p-8 hover:shadow-xl transition-all duration-500 hover:scale-105 group h-full">
+                <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:bg-teal-200 transition-all duration-300">
+                  <BookOpen className="w-8 h-8 text-teal-600" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4 group-hover:text-teal-600 transition-colors duration-300">
+                  Khan Academy Platform
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Comprehensive curriculum with interactive exercises, instructional videos, and progress tracking for
+                  mastery-based learning.
                 </p>
+                <Badge className="bg-teal-100 text-teal-800">Curriculum</Badge>
               </Card>
             </AnimatedSection>
 
-            <AnimatedSection animation="scale-up" delay={300}>
-              <Card className="text-center p-8 hover:shadow-xl transition-all duration-500 hover:scale-105 border-2 border-purple-200">
-                <div className="text-4xl font-bold text-purple-600 mb-2">95%</div>
-                <h3 className="font-semibold text-lg mb-2">Teacher Satisfaction</h3>
-                <p className="text-gray-600 text-sm">
-                  Teachers report higher job satisfaction as empowered learning coaches
+            <AnimatedSection animation="fade-up" delay={300}>
+              <Card className="text-center p-8 hover:shadow-xl transition-all duration-500 hover:scale-105 group h-full">
+                <div className="w-16 h-16 bg-rose-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:bg-rose-200 transition-all duration-300">
+                  <Users className="w-8 h-8 text-rose-500" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4 group-hover:text-rose-500 transition-colors duration-300">
+                  Teacher Training Platform
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Comprehensive training resources and ongoing support to help teachers transition from lecturers to
+                  learning coaches.
                 </p>
+                <Badge className="bg-rose-100 text-rose-800">Training</Badge>
               </Card>
             </AnimatedSection>
           </div>
@@ -618,34 +491,65 @@ export default function DemoPage() {
 
       {/* Call to Action */}
       <AnimatedSection
-        className="py-20 px-4 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 text-white"
-        animation="scale-up"
+        className="py-20 px-4 bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 text-white relative overflow-hidden"
+        animation="fade-up"
       >
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Education?</h2>
-          <p className="text-xl mb-8 opacity-90">
-            Join Iztirab in revolutionizing how students learn and teachers teach in Pakistan through AI-supported
-            personalized learning
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/80 to-teal-600/80 animate-gradient bg-300%"></div>
+        <div className="container mx-auto max-w-4xl text-center relative z-10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Classroom?</h2>
+          <p className="text-xl mb-12 opacity-90">
+            Join us in revolutionizing education through AI-supported personalized learning. Every student deserves to
+            reach their full potential.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="bg-white text-blue-600 hover:bg-gray-100 hover:scale-105 hover:shadow-xl transition-all duration-300 group"
-              asChild
-            >
-              <Link href="/#contact">
-                Partner With Us
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-              </Link>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-blue-600 hover:scale-105 transition-all duration-300 bg-transparent"
-              asChild
-            >
-              <Link href="/">Back to Home</Link>
-            </Button>
+
+          <AnimatedSection animation="scale-up" delay={400}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                size="lg"
+                className="bg-white text-emerald-600 hover:bg-gray-100 hover:scale-105 hover:shadow-xl transition-all duration-300 group"
+                asChild
+              >
+                <Link href="/#contact">
+                  <TrendingUp className="mr-2 w-4 h-4 group-hover:animate-bounce" />
+                  Start Your Pilot Program
+                </Link>
+              </Button>
+              <Button
+                size="lg"
+                className="bg-rose-500 hover:bg-rose-600 hover:scale-105 hover:shadow-xl transition-all duration-300 group"
+                asChild
+              >
+                <Link href="/about">
+                  <BookOpen className="mr-2 w-4 h-4 group-hover:animate-bounce" />
+                  Learn More About Iztirab
+                </Link>
+              </Button>
+            </div>
+          </AnimatedSection>
+        </div>
+      </AnimatedSection>
+
+      {/* Footer */}
+      <AnimatedSection className="bg-gray-900 text-white py-12 px-4 relative overflow-hidden" animation="fade-up">
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900 to-gray-800 animate-gradient bg-300%"></div>
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="flex items-center space-x-2 mb-4 md:mb-0 group">
+              <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-emerald-700 rounded-lg flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                <Brain className="w-5 h-5 text-white animate-pulse" />
+              </div>
+              <div>
+                <h3 className="text-lg font-bold group-hover:text-emerald-400 transition-colors duration-300">
+                  IZTIRAB
+                </h3>
+                <p className="text-sm text-gray-400">Empowering Restless Learning</p>
+              </div>
+            </div>
+            <div className="text-center md:text-right">
+              <p className="text-gray-400 text-sm hover:text-white transition-colors duration-300">
+                © 2025 Iztirab. Transforming education through AI-supported personalized learning.
+              </p>
+            </div>
           </div>
         </div>
       </AnimatedSection>
