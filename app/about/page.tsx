@@ -47,7 +47,7 @@ export default function AboutPage() {
             </div>
             <div>
               <h1 className="text-xl font-bold text-gray-900 hover:text-emerald-600 transition-colors duration-300">
-                IZTIRAB
+                Izteraab
               </h1>
               <p className="text-xs text-emerald-600 font-medium animate-pulse">Empowering Learning</p>
             </div>
@@ -90,7 +90,7 @@ export default function AboutPage() {
             className={`mb-6 bg-emerald-100 text-emerald-800 hover:bg-emerald-100 hover:scale-105 transition-all duration-500 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
           >
             <Sparkles className="w-3 h-3 mr-1 animate-spin" />
-            About Iztirab
+            About Izteraab
           </Badge>
           <h1
             className={`text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight transition-all duration-700 delay-200 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
@@ -103,7 +103,7 @@ export default function AboutPage() {
           <p
             className={`text-xl text-gray-600 mb-8 leading-relaxed transition-all duration-700 delay-400 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
           >
-            Discover the inspiration behind Iztirab and our mission to transform Pakistani education through
+            Discover the inspiration behind Izteraab and our mission to transform Pakistani education through
             AI-supported personalized learning and comprehensive teacher training.
           </p>
           <div
@@ -141,9 +141,9 @@ export default function AboutPage() {
                   <strong className="text-emerald-700">— Allama Iqbal</strong>
                   <br />
                   <br />
-                  At Iztirab, we recognize that deep, meaningful learning emerges from embracing challenges and
+                  At Izteraab, we recognize that deep, meaningful learning emerges from embracing challenges and
                   disruptions. The "storm" symbolizes necessary educational transformation, and the "restlessness"
-                  (iztirab) embodies the curiosity and active pursuit of knowledge we aim to instill in every student.
+                  (izteraab) embodies the curiosity and active pursuit of knowledge we aim to instill in every student.
                   <br />
                   <br />
                   Inspired by Allama Iqbal's philosophy, we aim to cultivate a generation of learners who proactively
@@ -200,7 +200,7 @@ export default function AboutPage() {
                   </h3>
                   <p className="text-gray-600 leading-relaxed">
                     To create a replicable model that can scale across Pakistan, fostering a generation of curious,
-                    confident learners who embrace challenges and pursue knowledge with the restless spirit of Iztirab.
+                    confident learners who embrace challenges and pursue knowledge with the restless spirit of Izteraab.
                   </p>
                 </div>
               </div>
@@ -218,7 +218,7 @@ export default function AboutPage() {
                   </p>
                   <div className="bg-white/20 p-4 rounded-lg backdrop-blur-sm">
                     <p className="text-sm italic">
-                      "True learning requires curiosity, action, and challenge—the very essence of Iztirab."
+                      "True learning requires curiosity, action, and challenge—the very essence of Izteraab."
                     </p>
                   </div>
                 </CardContent>
@@ -480,14 +480,14 @@ export default function AboutPage() {
               </div>
               <div>
                 <h3 className="text-lg font-bold group-hover:text-emerald-400 transition-colors duration-300">
-                  IZTIRAB
+                  Izteraab
                 </h3>
                 <p className="text-sm text-gray-400">Empowering Restless Learning</p>
               </div>
             </div>
             <div className="text-center md:text-right">
               <p className="text-gray-400 text-sm hover:text-white transition-colors duration-300">
-                © 2025 Iztirab. Transforming education through AI-supported personalized learning.
+                © 2025 Izteraab. Transforming education through AI-supported personalized learning.
               </p>
             </div>
           </div>

@@ -95,7 +95,7 @@ export default function DemoPage() {
             </div>
             <div>
               <h1 className="text-xl font-bold text-gray-900 hover:text-emerald-600 transition-colors duration-300">
-                IZTIRAB
+                Izteraab
               </h1>
               <p className="text-xs text-emerald-600 font-medium animate-pulse">Empowering Learning</p>
             </div>
@@ -151,7 +151,7 @@ export default function DemoPage() {
           <p
             className={`text-xl text-gray-600 mb-8 leading-relaxed transition-all duration-700 delay-400 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
           >
-            See how Iztirab transforms traditional classrooms into personalized learning environments where every
+            See how Izteraab transforms traditional classrooms into personalized learning environments where every
             student thrives at their own pace.
           </p>
           <div
@@ -335,7 +335,7 @@ export default function DemoPage() {
       <AnimatedSection className="py-20 px-4" animation="fade-up">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Traditional vs. Iztirab Approach</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Traditional vs. Izteraab Approach</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               See the dramatic difference in learning outcomes and student engagement
             </p>
@@ -388,7 +388,7 @@ export default function DemoPage() {
                 <CardHeader className="pb-6">
                   <CardTitle className="text-xl text-emerald-700 flex items-center">
                     <Brain className="w-5 h-5 mr-2 animate-pulse" />
-                    Iztirab Classroom
+                    Izteraab Classroom
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
@@ -521,7 +521,7 @@ export default function DemoPage() {
               >
                 <Link href="/about">
                   <BookOpen className="mr-2 w-4 h-4 group-hover:animate-bounce" />
-                  Learn More About Iztirab
+                  Learn More About Izteraab
                 </Link>
               </Button>
             </div>
@@ -540,14 +540,14 @@ export default function DemoPage() {
               </div>
               <div>
                 <h3 className="text-lg font-bold group-hover:text-emerald-400 transition-colors duration-300">
-                  IZTIRAB
+                  Izteraab
                 </h3>
                 <p className="text-sm text-gray-400">Empowering Restless Learning</p>
               </div>
             </div>
             <div className="text-center md:text-right">
               <p className="text-gray-400 text-sm hover:text-white transition-colors duration-300">
-                © 2025 Iztirab. Transforming education through AI-supported personalized learning.
+                © 2025 Izteraab. Transforming education through AI-supported personalized learning.
               </p>
             </div>
           </div>

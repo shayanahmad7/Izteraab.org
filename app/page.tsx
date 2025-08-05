@@ -47,7 +47,7 @@ export default function HomePage() {
             </div>
             <div>
               <h1 className="text-xl font-bold text-gray-900 hover:text-emerald-600 transition-colors duration-300">
-                IZTIRAB
+                Izteraab
               </h1>
               <p className="text-xs text-emerald-600 font-medium animate-pulse">Empowering Learning</p>
             </div>
@@ -430,14 +430,14 @@ export default function HomePage() {
               </div>
               <div>
                 <h3 className="text-lg font-bold group-hover:text-emerald-400 transition-colors duration-300">
-                  IZTIRAB
+                  Izteraab
                 </h3>
                 <p className="text-sm text-gray-400">Empowering Restless Learning</p>
               </div>
             </div>
             <div className="text-center md:text-right">
               <p className="text-gray-400 text-sm hover:text-white transition-colors duration-300">
-                © 2025 Iztirab. Transforming education through AI-supported personalized learning.
+                © 2025 Izteraab. Transforming education through AI-supported personalized learning.
               </p>
             </div>
           </div>
