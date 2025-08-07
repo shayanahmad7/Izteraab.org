@@ -5,24 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
 import { AnimatedSection } from "@/components/animated-section"
-import {
-  Brain,
-  Users,
-  BookOpen,
-  ArrowLeft,
-  CheckCircle,
-  TrendingUp,
-  Clock,
-  Target,
-  Sparkles,
-  Play,
-  Pause,
-  RotateCcw,
-  User,
-  GraduationCap,
-  MessageSquare,
-  BarChart3,
-} from "lucide-react"
+import { Brain, Users, BookOpen, ArrowLeft, CheckCircle, TrendingUp, Clock, Target, Sparkles, Play, Pause, RotateCcw, User, GraduationCap, MessageSquare, BarChart3 } from 'lucide-react'
 import Link from "next/link"
 import { useEffect, useState } from "react"
 
@@ -97,7 +80,7 @@ export default function DemoPage() {
               <h1 className="text-xl font-bold text-gray-900 hover:text-emerald-600 transition-colors duration-300">
                 Izteraab
               </h1>
-              <p className="text-xs text-emerald-600 font-medium animate-pulse">Empowering Learning</p>
+              <p className="text-xs text-emerald-600 font-medium">Empowering Learning</p>
             </div>
           </div>
           <nav
@@ -375,8 +358,8 @@ export default function DemoPage() {
                   </div>
                   <div className="mt-6 p-4 bg-red-50 rounded-lg">
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-red-600">30%</div>
-                      <div className="text-sm text-gray-600">Average mastery rate</div>
+                      <div className="text-3xl font-bold text-red-600">Lower mastery rate</div>
+                      <div className="text-sm text-gray-600"></div>
                     </div>
                   </div>
                 </CardContent>
@@ -416,8 +399,8 @@ export default function DemoPage() {
                   </div>
                   <div className="mt-6 p-4 bg-emerald-50 rounded-lg">
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-emerald-600">85%</div>
-                      <div className="text-sm text-gray-600">Average mastery rate</div>
+                      <div className="text-3xl font-bold text-emerald-600">Higher mastery rate</div>
+                      <div className="text-sm text-gray-600"></div>
                     </div>
                   </div>
                 </CardContent>

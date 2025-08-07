@@ -4,19 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { AnimatedSection } from "@/components/animated-section"
-import {
-  Brain,
-  Users,
-  BookOpen,
-  ArrowRight,
-  Lightbulb,
-  TrendingUp,
-  Heart,
-  Sparkles,
-  Zap,
-  Globe,
-  UserCheck,
-} from "lucide-react"
+import { Brain, Users, BookOpen, ArrowRight, Lightbulb, TrendingUp, Heart, Sparkles, Zap, Globe, UserCheck } from 'lucide-react'
 import Link from "next/link"
 import { useEffect, useState } from "react"
 
@@ -49,7 +37,7 @@ export default function HomePage() {
               <h1 className="text-xl font-bold text-gray-900 hover:text-emerald-600 transition-colors duration-300">
                 Izteraab
               </h1>
-              <p className="text-xs text-emerald-600 font-medium animate-pulse">Empowering Learning</p>
+              <p className="text-xs text-emerald-600 font-medium">Empowering Learning</p>
             </div>
           </div>
           <nav
