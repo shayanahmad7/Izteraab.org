@@ -1,46 +1,76 @@
 "use client"
 
-import { useScrollAnimation } from "@/hooks/useScrollAnimation"
-import type { ReactNode } from "react"
+import type React from "react"
+
+import { useEffect, useRef, useState } from "react"
+import { cn } from "@/lib/utils"
 
 interface AnimatedSectionProps {
-  children: ReactNode
+  children: React.ReactNode
   className?: string
-  animation?: "fade-up" | "fade-left" | "fade-right" | "scale-up" | "slide-up"
+  animation?: "fade-up" | "fade-down" | "fade-left" | "fade-right" | "scale-up" | "slide-up"
   delay?: number
-  threshold?: number
+  id?: string
 }
 
-export function AnimatedSection({
-  children,
-  className = "",
-  animation = "fade-up",
-  delay = 0,
-  threshold = 0.1,
-}: AnimatedSectionProps) {
-  const [ref, isVisible] = useScrollAnimation(threshold, "-50px 0px -50px 0px")
+export function AnimatedSection({ children, className, animation = "fade-up", delay = 0, id }: AnimatedSectionProps) {
+  const [isVisible, setIsVisible] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
 
-  const getAnimationClass = () => {
-    const baseClass = isVisible ? "animate-in" : "animate-out"
-    const delayClass = delay > 0 ? `animation-delay-${delay}` : ""
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            setIsVisible(true)
+          }, delay)
+        }
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      },
+    )
 
-    switch (animation) {
-      case "fade-left":
-        return `${baseClass} slide-in-from-left-8 fade-in duration-700 ease-out ${delayClass}`
-      case "fade-right":
-        return `${baseClass} slide-in-from-right-8 fade-in duration-700 ease-out ${delayClass}`
-      case "scale-up":
-        return `${baseClass} zoom-in-95 fade-in duration-500 ease-out ${delayClass}`
-      case "slide-up":
-        return `${baseClass} slide-in-from-bottom-8 duration-600 ease-out ${delayClass}`
-      default:
-        return `${baseClass} slide-in-from-bottom-4 fade-in duration-600 ease-out ${delayClass}`
+    if (ref.current) {
+      observer.observe(ref.current)
     }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current)
+      }
+    }
+  }, [delay])
+
+  const getAnimationClasses = () => {
+    const baseClasses = "transition-all duration-1000 ease-out"
+
+    if (!isVisible) {
+      switch (animation) {
+        case "fade-up":
+          return `${baseClasses} opacity-0 translate-y-8`
+        case "fade-down":
+          return `${baseClasses} opacity-0 -translate-y-8`
+        case "fade-left":
+          return `${baseClasses} opacity-0 translate-x-8`
+        case "fade-right":
+          return `${baseClasses} opacity-0 -translate-x-8`
+        case "scale-up":
+          return `${baseClasses} opacity-0 scale-95`
+        case "slide-up":
+          return `${baseClasses} opacity-0 translate-y-12`
+        default:
+          return `${baseClasses} opacity-0 translate-y-8`
+      }
+    }
+
+    return `${baseClasses} opacity-100 translate-y-0 translate-x-0 scale-100`
   }
 
   return (
-    <section ref={ref} className={`${className} ${getAnimationClass()} transition-all`}>
+    <div ref={ref} id={id} className={cn(getAnimationClasses(), className)}>
       {children}
-    </section>
+    </div>
   )
 }

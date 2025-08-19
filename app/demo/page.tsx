@@ -5,7 +5,24 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
 import { AnimatedSection } from "@/components/animated-section"
-import { Brain, Users, BookOpen, ArrowLeft, CheckCircle, TrendingUp, Clock, Target, Sparkles, Play, Pause, RotateCcw, User, GraduationCap, MessageSquare, BarChart3 } from 'lucide-react'
+import {
+  Brain,
+  Users,
+  BookOpen,
+  ArrowLeft,
+  CheckCircle,
+  TrendingUp,
+  Clock,
+  Target,
+  Sparkles,
+  Play,
+  Pause,
+  RotateCcw,
+  User,
+  GraduationCap,
+  MessageSquare,
+  BarChart3,
+} from "lucide-react"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 

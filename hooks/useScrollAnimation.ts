@@ -1,32 +1,28 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useState } from "react"
 
-export function useScrollAnimation(threshold = 0.1, rootMargin = "0px") {
+export function useScrollAnimation() {
   const [isVisible, setIsVisible] = useState(false)
-  const ref = useRef<HTMLElement>(null)
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsVisible(entry.isIntersecting)
-      },
-      {
-        threshold,
-        rootMargin,
-      },
-    )
+    const handleScroll = () => {
+      const scrollY = window.scrollY
+      const windowHeight = window.innerHeight
 
-    if (ref.current) {
-      observer.observe(ref.current)
-    }
-
-    return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current)
+      // Trigger animation when user scrolls past 10% of viewport
+      if (scrollY > windowHeight * 0.1) {
+        setIsVisible(true)
       }
     }
-  }, [threshold, rootMargin])
 
-  return [ref, isVisible] as const
+    window.addEventListener("scroll", handleScroll)
+
+    // Check initial position
+    handleScroll()
+
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  return isVisible
 }
